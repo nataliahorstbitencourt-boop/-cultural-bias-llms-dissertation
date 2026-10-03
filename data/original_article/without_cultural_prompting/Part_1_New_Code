@@ -87,7 +87,7 @@ for index, row in prompt_variant_list.iterrows():
         {"role": "user", "content": question}
     ],
     reasoning_effort="minimal",
-    max_completion_tokens=256
+    max_completion_tokens=512
 )
         response = chat_response.choices[0].message.content.strip()
         responses_df.loc[len(responses_df)] = {"#variant": variant, "country": country, "scale":scale, "survey_question": question, "generated_text": response} 
