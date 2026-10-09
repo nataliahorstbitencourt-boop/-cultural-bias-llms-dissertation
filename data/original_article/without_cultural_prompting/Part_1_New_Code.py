@@ -81,13 +81,15 @@ for index, row in prompt_variant_list.iterrows():
         scale = row['scale']
         question = row['prompt']
         chat_response = client.chat.completions.create(
-    model="gpt-5-2025-08-07",
-    messages=[
-        {"role": "system", "content": system},
-        {"role": "user", "content": question}
- ]  reasoning_effort="medium",
-        max_completion_tokens=512
-    )
+            model="gpt-5-2025-08-07",
+            messages=[
+                {"role": "system", "content": system},
+                {"role": "user", "content": question}
+            ],
+            reasoning_effort="medium",
+            max_completion_tokens=512
+        )
+    
 
         response = chat_response.choices[0].message.content.strip()
         responses_df.loc[len(responses_df)] = {"#variant": variant, "country": country, "scale":scale, "survey_question": question, "generated_text": response} 
