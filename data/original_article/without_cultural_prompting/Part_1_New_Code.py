@@ -85,10 +85,10 @@ for index, row in prompt_variant_list.iterrows():
     messages=[
         {"role": "system", "content": system},
         {"role": "user", "content": question}
-    ],
-    reasoning_effort="minimal",
-    max_completion_tokens=512
-)
+ ]  reasoning_effort="medium",,
+        max_completion_tokens=512
+    )
+
         response = chat_response.choices[0].message.content.strip()
         responses_df.loc[len(responses_df)] = {"#variant": variant, "country": country, "scale":scale, "survey_question": question, "generated_text": response} 
         responses_completion_obj.append(serialize_completion(chat_response))
