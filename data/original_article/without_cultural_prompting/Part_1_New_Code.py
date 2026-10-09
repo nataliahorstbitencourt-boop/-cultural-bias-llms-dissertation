@@ -85,7 +85,7 @@ for index, row in prompt_variant_list.iterrows():
     messages=[
         {"role": "system", "content": system},
         {"role": "user", "content": question}
- ]  reasoning_effort="medium",,
+ ]  reasoning_effort="medium",
         max_completion_tokens=512
     )
 
