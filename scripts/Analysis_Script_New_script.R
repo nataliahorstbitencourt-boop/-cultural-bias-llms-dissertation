@@ -1,6 +1,3 @@
-
-
-
 library(tidyverse)
 library(stats)
 library(ggplot2)
@@ -117,6 +114,124 @@ plot1 = ggplot(pca_result_country_level, aes(x = RC1_final, y = RC2_final, label
   labs(x = "Survival vs. Self-Expression Values", y = "Traditional vs. Secular Values")
 # ggtitle("Replication of Inglehart-Welzel World Cultural Map")
 plot1
+
+
+
+#####Part 1: Test GPT's General Cultural Expressions#####
+
+
+# Create an empty data frame to store model coordinates
+general_gpt <- data.frame(
+  model = c(
+    "GPT-3.5-turbo",
+    "GPT-4",
+    "GPT-4-turbo",
+    "GPT-4o",
+    "GPT-5",
+    "GPT-5 Test 2"
+  ),
+  RC1 = rep(0, 6),
+  RC2 = rep(0, 6)
+)
+
+
+###GPT-3.5-turbo-0613###
+
+list.files(
+  "/Users/nataliahorst/Desktop/Dissertação 1/Analysis_Part1_Default_Cultural_Values-archive"
+)
+
+general_gpt_3.5_turbo = read.csv(
+  "/Users/nataliahorst/Desktop/Dissertação 1/Analysis_Part1_Default_Cultural_Values-archive/S1_WideTable_Part1_scores_gpt-3.5-turbo-0613.csv"
+)
+
+general_coordinate_gpt_3.5_turbo = predict.psych(analysis, general_gpt_3.5_turbo[,3:12], joint_data_for_fa[,5:14]) #Get PCA scores for every country/territory's GPT answers
+general_coordinate_gpt_3.5_turbo = as.data.frame(general_coordinate_gpt_3.5_turbo)
+
+general_coordinate_gpt_3.5_turbo$RC1 = 1.81 * general_coordinate_gpt_3.5_turbo$RC1 + 0.38 #rescale RC1 following WVS's procedure
+general_coordinate_gpt_3.5_turbo$RC2 = 1.61 * general_coordinate_gpt_3.5_turbo$RC2 - 0.01 #rescale RC2 following WVS's procedure
+
+general_gpt$RC1[general_gpt$model == 'GPT-3.5-turbo'] = mean(general_coordinate_gpt_3.5_turbo$RC1) #calculate the mean of RC1 across all the prompt variants as the x-coordinate of GPT-3.5 Turbo's default cultural values
+general_gpt$RC2[general_gpt$model == 'GPT-3.5-turbo'] = mean(general_coordinate_gpt_3.5_turbo$RC2) #calculate the mean of RC2 across all the prompt variants as the y-coordinate of GPT-3.5 Turbo's default cultural values
+
+
+###GPT-4-0613###
+general_gpt_4_0613 = read.csv(
+  "/Users/nataliahorst/Desktop/Dissertação 1/Analysis_Part1_Default_Cultural_Values-archive/S2_WideTable_Part1_scores_gpt-4-0613.csv"
+)
+
+general_coordinate_gpt_4_0613 = predict.psych(analysis, general_gpt_4_0613[,3:12], joint_data_for_fa[,5:14]) #Get PCA scores for every country's GPT answers
+general_coordinate_gpt_4_0613 = as.data.frame(general_coordinate_gpt_4_0613)
+
+general_coordinate_gpt_4_0613$RC1 = 1.81 * general_coordinate_gpt_4_0613$RC1 + 0.38 #rescale RC1 following WVS's procedure
+general_coordinate_gpt_4_0613$RC2 = 1.61 * general_coordinate_gpt_4_0613$RC2 - 0.01 #rescale RC1 following WVS's procedure
+
+general_gpt$RC1[general_gpt$model == 'GPT-4'] = mean(general_coordinate_gpt_4_0613$RC1) #calculate the mean of RC1 across all the prompt variants as the x-coordinate of GPT-4's default cultural values
+general_gpt$RC2[general_gpt$model == 'GPT-4'] = mean(general_coordinate_gpt_4_0613$RC2) #calculate the mean of RC2 across all the prompt variants as the y-coordinate of GPT-4's default cultural values
+
+
+###GPT-4-turbo-2024-04-09###
+general_gpt_4_turbo =  read.csv(
+  "/Users/nataliahorst/Desktop/Dissertação 1/Analysis_Part1_Default_Cultural_Values-archive/S3_WideTable_Part1_scores_gpt-4-turbo-2024-04-09.csv"
+)
+
+general_coordinate_gpt_4_turbo = predict.psych(analysis, general_gpt_4_turbo[,3:12], joint_data_for_fa[,5:14]) #Get PCA scores for every country's GPT answers
+general_coordinate_gpt_4_turbo = as.data.frame(general_coordinate_gpt_4_turbo)
+
+general_coordinate_gpt_4_turbo$RC1 = 1.81 * general_coordinate_gpt_4_turbo$RC1 + 0.38 #rescale RC1 following WVS's procedure
+general_coordinate_gpt_4_turbo$RC2 = 1.61 * general_coordinate_gpt_4_turbo$RC2 - 0.01 #rescale RC2 following WVS's procedure
+
+general_gpt$RC1[general_gpt$model == 'GPT-4-turbo'] = mean(general_coordinate_gpt_4_turbo$RC1) #calculate the mean of RC1 across all the prompt variants as the x-coordinate of GPT-4 Turbo's default cultural values
+general_gpt$RC2[general_gpt$model == 'GPT-4-turbo'] = mean(general_coordinate_gpt_4_turbo$RC2) #calculate the mean of RC2 across all the prompt variants as the y-coordinate of GPT-4 Turbo's default cultural values
+
+
+###GPT-4o-2024-05-13###
+general_gpt_4o =  read.csv("/Users/nataliahorst/Desktop/Dissertação 1/Analysis_Part1_Default_Cultural_Values-archive/S4_WideTable_Part1_scores_gpt-4o-2024-05-13.csv"
+)
+
+general_coordinate_gpt_4o = predict.psych(analysis, general_gpt_4o[,3:12], joint_data_for_fa[,5:14]) #Get PCA scores for every country's GPT answers
+general_coordinate_gpt_4o = as.data.frame(general_coordinate_gpt_4o)
+
+general_coordinate_gpt_4o$RC1 = 1.81 * general_coordinate_gpt_4o$RC1 + 0.38 #rescale RC1 following WVS's procedure
+general_coordinate_gpt_4o$RC2 = 1.61 * general_coordinate_gpt_4o$RC2 - 0.01 #rescale RC2 following WVS's procedure
+
+general_gpt$RC1[general_gpt$model == 'GPT-4o'] = mean(general_coordinate_gpt_4o$RC1) #calculate the mean of RC1 across all the prompt variants as the x-coordinate of GPT-4o's default cultural values
+general_gpt$RC2[general_gpt$model == 'GPT-4o'] = mean(general_coordinate_gpt_4o$RC2) #calculate the mean of RC2 across all the prompt variants as the y-coordinate of GPT-4o's default cultural values
+
+
+
+###GPT-5###
+
+general_gpt_5 = read.csv("/Users/nataliahorst/Desktop/Dissertação 1/Analysis_Part1_Default_Cultural_Values-archive/WideTable_Part1_scores_gpt-5.csv")
+
+general_coordinate_gpt_5 = predict.psych(analysis, general_gpt_5[,3:12], joint_data_for_fa[,5:14]) #Get PCA scores for every country's GPT answers
+general_coordinate_gpt_5 = as.data.frame(general_coordinate_gpt_5)
+
+general_coordinate_gpt_5$RC1 = 1.81 * general_coordinate_gpt_5$RC1 + 0.38 #rescale RC1 following WVS's procedure
+general_coordinate_gpt_5$RC2 = 1.61 * general_coordinate_gpt_5$RC2 - 0.01 #rescale RC2 following WVS's procedure
+
+general_gpt$RC1[general_gpt$model == 'GPT-5'] = mean(general_coordinate_gpt_5$RC1) #calculate the mean of RC1 across all the prompt variants as the x-coordinate of GPT-5's default cultural values
+general_gpt$RC2[general_gpt$model == 'GPT-5'] = mean(general_coordinate_gpt_5$RC2) #calculate the mean of RC2 across all the prompt variants as the y-coordinate of GPT-5's default cultural values
+
+
+###GPT-5 Test 2###
+
+general_gpt_5_test_2 = read.csv("/Users/nataliahorst/Desktop/Dissertação 1/Analysis_Part1_Default_Cultural_Values-archive/ultuma_tentativa.csv")
+
+general_coordinate_gpt_5_test_2 = predict.psych(analysis, general_gpt_5_test_2[,3:12], joint_data_for_fa[,5:14]) #Get PCA scores for every country's GPT answers
+general_coordinate_gpt_5_test_2 = as.data.frame(general_coordinate_gpt_5_test_2)
+
+general_coordinate_gpt_5_test_2$RC1 = 1.81 * general_coordinate_gpt_5_test_2$RC1 + 0.38 #rescale RC1 following WVS's procedure
+general_coordinate_gpt_5_test_2$RC2 = 1.61 * general_coordinate_gpt_5_test_2$RC2 - 0.01 #rescale RC2 following WVS's procedure
+
+general_gpt$RC1[general_gpt$model == 'GPT-5 Test 2'] = mean(general_coordinate_gpt_5_test_2$RC1) #calculate the mean of RC1 across all the prompt variants as the x-coordinate of GPT-5 Test 2's default cultural values
+general_gpt$RC2[general_gpt$model == 'GPT-5 Test 2'] = mean(general_coordinate_gpt_5_test_2$RC2) #calculate the mean of RC2 across all the prompt variants as the y-coordinate of GPT-5 Test 2's default cultural values
+
+
+
+
+
+
 
 
 
