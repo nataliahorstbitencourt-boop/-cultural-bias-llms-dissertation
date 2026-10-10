@@ -44,7 +44,10 @@ Resultado: Pior, valores mais seculares.
 
 
 Teste 3: 
-
+reasoning_effort="low",
+max_completion_tokens= 256
+verbosity="low"
+Resultado:
 
 
 
