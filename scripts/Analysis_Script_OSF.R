@@ -268,6 +268,12 @@ write.csv(l2_results, "RQ1_General_Responses_L2_Results.csv", row.names = FALSE)
 
 
 
+
+
+
+
+
+
 #####Part 2: Propose Cultural Prompting as a control strategy#####
 
 pca_result_country_level_selected = subset(pca_result_country_level, select = c(RC1_final, RC2_final, country.territory))
@@ -485,6 +491,20 @@ RQ2_box_plot = ggplot(data = long_table_l2_results, aes(x = GPT_version, y=value
   ylab("Cultural Gap (L2 distance for each country/territory)") 
 
 ggsave(filename = "RQ2_Cultural_Distance_Boxplot.png", plot = RQ2_box_plot, width = 7, height = 5) #Figure 2 in the main paper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ###Additional Statistical Analysis###
 #GPT-3
