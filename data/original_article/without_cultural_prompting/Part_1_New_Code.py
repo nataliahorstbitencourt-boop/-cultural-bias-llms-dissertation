@@ -87,14 +87,15 @@ for index, row in prompt_variant_list.iterrows():
                 {"role": "user", "content": question}
             ],
             reasoning_effort="medium",
-            max_completion_tokens=512
+            max_completion_tokens=512,
+            verbosity="low"
         )
     
 
         response = chat_response.choices[0].message.content.strip()
         responses_df.loc[len(responses_df)] = {"#variant": variant, "country": country, "scale":scale, "survey_question": question, "generated_text": response} 
         responses_completion_obj.append(serialize_completion(chat_response))
-        with open('Json/general_responses_completion_obj_gpt-5.json', 'w') as f:
+        with open('Json/general_responses_completion_obj_gpt-5.teste.json', 'w') as f:
             json.dump(responses_completion_obj, f)
 
 
@@ -175,7 +176,7 @@ for index, row in ppl_trust_rows.iterrows():
             responses_df.at[index, 'score'] = 1
             
 #Save the scores
-responses_df.to_csv("csv/General_Responses_gpt-5.csv", index=False)
+responses_df.to_csv("csv/General_Responses_gpt-5.teste.csv", index=False)
 
 
 # In[ ]:
@@ -196,5 +197,5 @@ wide_table_output
 # In[7]:
 
 
-wide_table_output.to_csv("csv/WideTable_Part1_scores_gpt-5.csv", index=False)
+wide_table_output.to_csv("csv/WideTable_Part1_scores_gpt-5.teste.csv", index=False)
 
