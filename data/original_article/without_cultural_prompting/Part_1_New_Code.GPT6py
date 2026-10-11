@@ -86,7 +86,7 @@ for index, row in prompt_variant_list.iterrows():
                 {"role": "system", "content": system},
                 {"role": "user", "content": question}
             ],
-        reasoning.effort: high
+        reasoning.effort: "high",
         max_completion_tokens: 1024
         )
     
