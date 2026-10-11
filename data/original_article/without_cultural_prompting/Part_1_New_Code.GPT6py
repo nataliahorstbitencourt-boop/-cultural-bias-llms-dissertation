@@ -77,17 +77,19 @@ for index, row in prompt_variant_list.iterrows():
     variant = row['#variant']
     country = "general"
 
+
     for index, row in question_list.iterrows():
         scale = row['scale']
         question = row['prompt']
+
         chat_response = client.chat.completions.create(
             model="gpt-6-astra",
             messages=[
                 {"role": "system", "content": system},
                 {"role": "user", "content": question}
             ],
-        reasoning.effort: "high",
-        max_completion_tokens: 1024
+            reasoning_effort="high",
+            max_completion_tokens=1024
         )
     
 
