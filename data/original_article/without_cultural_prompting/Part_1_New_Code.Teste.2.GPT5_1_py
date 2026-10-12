@@ -116,7 +116,7 @@ for index, row in prompt_variant_list.iterrows():
         )
 
         with open(
-            'Json/general_responses_completion_obj_gpt-5-1-json',
+            'Json/general_responses_completion_obj_gpt-5-1.json',
             'w'
         ) as f:
             json.dump(responses_completion_obj, f)
@@ -224,5 +224,5 @@ wide_table_output
 # In[7]:
 
 
-wide_table_output.to_csv("csv/WideTable_Part1_scores_gpt-5-1-csv", index=False)
+wide_table_output.to_csv("csv/General_Responses_gpt-5-1.csv", index=False)
 
