@@ -12,9 +12,7 @@ PARÂMETROS UTILIZADOS PELOS AUTORES:
             presence_penalty=0
 
 
-
 Observação: em todos estou utilizando a chat completions API.
-
 
 
 Modelo: GPT 5
@@ -28,34 +26,29 @@ text.verbosity: orienta o nível de detalhe da resposta que será apresentada.
 • medium (default) → balanced detail.
 • high → verbose, great for audits, teaching, or hand-offs
 max_completion_tokens= 
+Fonte: https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5&; https://crazyrouter.com/en/blog/gpt-5-api-parameters-guide-2026-unsupported-parameter-fixes; https://developers.openai.com/api/docs/models/gpt-5.
 
-Parâmetros do estudo: 
+
+
 
 Teste 1: 
 reasoning_effort="minimal",
 max_completion_tokens=256
-Resultado:
-
+Resultado: 
 
 Teste 2: 
 reasoning_effort="medium",
 max_completion_tokens=512
-Resultado: Pior, valores mais seculares.
+Resultado: Pior resultado entre os modelos GPT 5. Modelo não respondeu algumas perguntas.
 
 
 Teste 3: 
 reasoning_effort="low",
-max_completion_tokens= 256
+max_completion_tokens= 1024
 verbosity="low"
-Resultado:
+Resultado: Melhor resultado entre os modelos GPT 5 quando avaliada a média.
 
 
-
-
-Resultado:
-
-
-Fonte: https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5&; https://crazyrouter.com/en/blog/gpt-5-api-parameters-guide-2026-unsupported-parameter-fixes; https://developers.openai.com/api/docs/models/gpt-5.
 
 
 
@@ -72,20 +65,34 @@ Fonte: https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5&; 
 
 Modelo: GPT 6 Astra
 Versão: 
-Custo Estimado: US$ 17,67
+Custo Estimado: US$ 24,61
 Informações:
 reasoning.effort supports low, medium, high, xhigh, and max. O parâmetro controla o nível de esforço que o modelo dedica ao raciocínio antes de produzir a resposta.
+Fonte: https://developers.openai.com/api/docs/models/gpt-6-astra; https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5&;
 
 
 
 
-
+Teste 1:
 Parâmetros do estudo:
 reasoning.effort: low
 max_completion_tokens: 512
+Resultado: 
 
 
-Fonte: https://developers.openai.com/api/docs/models/gpt-6-astra; https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5&;
+Teste 2:
+Parâmetros do estudo:
+reasoning.effort: high
+max_completion_tokens: 1024
+Resultado: 
+
+Teste 3:
+Parâmetros do estudo:
+reasoning.effort: low
+max_completion_tokens: 512
+verbosity=low
+Resultado: 
+
 
 
 
