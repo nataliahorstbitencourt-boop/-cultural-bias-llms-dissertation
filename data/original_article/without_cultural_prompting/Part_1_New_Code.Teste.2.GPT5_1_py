@@ -203,7 +203,7 @@ for index, row in ppl_trust_rows.iterrows():
             responses_df.at[index, 'score'] = 1
             
 #Save the scores
-responses_df.to_csv("csv/General_Responses_gpt-5-1", index=False)
+responses_df.to_csv("csv/General_Responses_gpt-5-1.csv", index=False)
 
 
 # In[ ]:
