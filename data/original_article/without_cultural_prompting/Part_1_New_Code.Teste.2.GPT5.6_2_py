@@ -67,9 +67,19 @@ prompt_variant_list
 # In[10]:
 
 
-#Create an empty dataframe to store GPT-6 responses
-responses_df = pd.DataFrame(columns=['#variant', 'country', 'scale', 'survey_question', 'generated_text'])
-#Create an empty list to stroe multiple completion objects
+
+# Create an empty dataframe to store responses
+responses_df = pd.DataFrame(
+    columns=[
+        '#variant',
+        'country',
+        'scale',
+        'survey_question',
+        'generated_text'
+    ]
+)
+
+# Create an empty list to store completion objects
 responses_completion_obj = []
 
 for index, row in prompt_variant_list.iterrows():
@@ -77,29 +87,43 @@ for index, row in prompt_variant_list.iterrows():
     variant = row['#variant']
     country = "general"
 
+    for index, row in question_list.iterrows():
+        scale = row['scale']
+        question = row['prompt']
 
- 
-for index, row in question_list.iterrows():
-    scale = row['scale']
-    question = row['prompt']
-
-    chat_response = client.chat.completions.create(
-        model="gpt-5.6-terra",
-        messages=[
-            {"role": "system", "content": system},
-            {"role": "user", "content": question}
-        ],
-        reasoning_effort="medium",
-        max_completion_tokens=1600
-    )
-
-    
+        chat_response = client.chat.completions.create(
+            model="gpt-5.6-terra",
+            messages=[
+                {"role": "system", "content": system},
+                {"role": "user", "content": question}
+            ],
+            reasoning_effort="medium",
+            max_completion_tokens=1600
+        )
 
         response = chat_response.choices[0].message.content.strip()
-        responses_df.loc[len(responses_df)] = {"#variant": variant, "country": country, "scale":scale, "survey_question": question, "generated_text": response} 
-        responses_completion_obj.append(serialize_completion(chat_response))
-        with open('Json/general_responses_completion_obj_gpt-5.6-2-json', 'w') as f:
+
+        responses_df.loc[len(responses_df)] = {
+            "#variant": variant,
+            "country": country,
+            "scale": scale,
+            "survey_question": question,
+            "generated_text": response
+        }
+
+        responses_completion_obj.append(
+            serialize_completion(chat_response)
+        )
+
+        with open(
+            'Json/general_responses_completion_obj_gpt-5.6-2-json',
+            'w'
+        ) as f:
             json.dump(responses_completion_obj, f)
+
+
+
+
 
 
 # In[12]:
