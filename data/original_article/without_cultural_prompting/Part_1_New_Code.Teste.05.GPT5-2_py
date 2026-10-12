@@ -224,5 +224,5 @@ wide_table_output
 # In[7]:
 
 
-wide_table_output.to_csv("csv/General_Responses_gpt-5-2.csv", index=False)
+wide_table_output.to_csv("csv/General_Responses_gpt-5.2.csv", index=False)
 
