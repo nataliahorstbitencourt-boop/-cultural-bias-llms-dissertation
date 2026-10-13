@@ -1,5 +1,6 @@
 **ARTIGO QUE GUIA O TRABALHO**: Cultural bias and cultural alignment of large language models  
 **LINK:** https://doi.org/10.1093/pnasnexus/pgae346 
+Os resultados dos autores podem ser vistos neste repositório: https://osf.io/7sj3w/
 **LINK TEXTO QUALIFICAÇÃO:** https://docs.google.com/document/d/199j48Bk4fyCIyiN_NmwbA02D7XNCNMY5DnzYmmYRV20/edit?usp=sharing
  
  
