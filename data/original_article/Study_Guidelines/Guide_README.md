@@ -12,6 +12,7 @@ Os autores fizeram às versões do GPT (GPT-3, 3.5-turbo, 4, 4-turbo e 4o) as 10
 
 Para avançar o estudo dos autores, propõem-se testar as mesmas questões com subgrupos sociodemográficos.
 
+A pasta data/original_article tem os scripts e csvs para fazer a rodagem. A pasta resultados contém os resultados dos dois testes preliminares que eu realizei. E a pasta scripts tem os scripts do R para fazer a análise estatística. 
 
 
 
