@@ -2,7 +2,7 @@
 
 **LINK:** https://doi.org/10.1093/pnasnexus/pgae346 <br>
 
-Os resultados dos autores podem ser vistos neste repositório: https://osf.io/7sj3w/<br>
+**RESULTADOS AUTORES:** https://osf.io/7sj3w/<br>
 
 **LINK TEXTO QUALIFICAÇÃO:** https://docs.google.com/document/d/199j48Bk4fyCIyiN_NmwbA02D7XNCNMY5DnzYmmYRV20/edit?usp=sharing<br>
 
