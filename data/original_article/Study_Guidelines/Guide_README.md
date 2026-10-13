@@ -1,8 +1,23 @@
+**ARTIGO QUE GUIA O TRABALHO**: Cultural bias and cultural alignment of large language models  
+**LINK:** https://doi.org/10.1093/pnasnexus/pgae346 
+ 
+ 
+A minha ideia para a dissertação é replicar o estudo com versões mais recentes dos modelos OPENAI. O objetivo dos autores foi verificar se quais valores culturais os modelos de linguagem da OpenAI representam e se o “cultural prompting” (pedir ao modelo que responda como alguém de um país específico) reduz esse viés. 
+
+O primeiro passo foi construir o parâmetro de comparação a partir do Integrated Values Surveys (IVS), base que combina a World Values Survey (WVS) e a European Values Study (EVS). Os autores usaram os três ciclos mais recentes, de 2005 a 2022, o que resultou em 393.536 observações individuais de 112 países. Cinco deles (Egito, Kuwait, Catar, Tajiquistão e Uzbequistão) foram excluídos porque não tinham respostas válidas para alguma das perguntas necessárias, e a análise final ficou com 107 países e territórios.
+
+Com esses dados, os autores replicaram o Mapa Cultural de Inglehart-Welzel, extraindo as mesmas dez perguntas que dão origem ao mapa original: felicidade, confiança nas pessoas, respeito à autoridade, experiência de assinar petições, importância de Deus, justificabilidade da homossexualidade, justificabilidade do aborto, orgulho da nacionalidade, índice pós-materialista e índice de autonomia.
+
+Os autores fizeram às versões do GPT (GPT-3, 3.5-turbo, 4, 4-turbo e 4o) as 10 perguntas do Mapa Cultural de Inglehart-Welzel. Foram adotados dois tipos de condição de análise: o primeiro, sem indicação de país, em que o modelo foi instruído a responder como um “ser humano médio”, com o objetivo de identificar seus valores culturais padrão; e o segundo, com indicação de país (cultural prompting), em que o modelo foi instruído a responder como uma pessoa nascida e residente em cada um dos 107 países ou territórios analisados, com o objetivo de verificar se essa instrução aproximaria suas respostas dos valores locais. As respostas são então comparadas com dados reais da World Values Survey e da European Values Study de 107 países. O viés foi medido pela distância entre a posição do modelo e a do país no mapa.
+
+Para avançar o estudo dos autores, propõem-se testar as mesmas questões com subgrupos sociodemográficos.
+
+
+
 **VERSÕES GPT UTILIZADAS PELOS AUTORES:** GPT-3.5-turbo, GPT-4, GPT-4-turbo, GPT-4o
-**VERSÕES GPT A SEREM UTILIZADAS:** XXXXXXX
+**VERSÕES GPT A SEREM UTILIZADAS:**  GPT 5.6 Terra e GPT 6 Astra
 
-PARÂMETROS UTILIZADOS PELOS AUTORES:
-
+**PARÂMETROS UTILIZADOS PELOS AUTORES**:
 
  chat_response = client.chat.completions.create
             temperature=0,
@@ -11,8 +26,8 @@ PARÂMETROS UTILIZADOS PELOS AUTORES:
             frequency_penalty=0,
             presence_penalty=0
 
+O que eu preciso fazer agora: Rodar os dados! E montar a análise de subgrupos.
 
-Observação: em todos estou utilizando a chat completions API.
 
 
 
@@ -31,26 +46,13 @@ max_completion_tokens=
 **Fonte:** https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5&; https://crazyrouter.com/en/blog/gpt-5-api-parameters-guide-2026-unsupported-parameter-fixes; https://developers.openai.com/api/docs/models/gpt-5.
 
 
-**Teste 1:** 
-reasoning_effort="minimal",
-max_completion_tokens=256
-Resultado: Segundo melhor resultado entre os GPTs 5.
+**Modelo:** GPT 5.6
+**Versão:** Terra
+A versão Terra é o ponto intermediário na família GPT-5.6. É significativamente mais capaz que Luna, ao mesmo tempo que é consideravelmente mais barato e mais rápido que Sol. Foi escolhido por custo X eficiência em comparação aos demais modelos GPT 5.6.
+**Custo Estimado:** US$ 5,17
+**Informações:**
 
-
-**Teste 2:** 
-reasoning_effort="medium",
-max_completion_tokens=512
-Resultado: Pior resultado entre os modelos GPT 5. Modelo não respondeu algumas perguntas. Aumentar tokens.
-
-
-**Teste 3:** 
-reasoning_effort="low",
-max_completion_tokens= 1024
-verbosity="low"
-Resultado: Melhor resultado entre os modelos GPT 5 quando avaliada a média. Aumentar os tokens.
-
-
-
+**Fonte:** https://developers.openai.com/api/docs/models/gpt-5.6-terra; 
 
 
 **Modelo:** GPT 6 Astra
@@ -61,7 +63,34 @@ reasoning.effort supports low, medium, high, xhigh, and max. O parâmetro contro
 **Fonte:** https://developers.openai.com/api/docs/models/gpt-6-astra; https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5&;
 
 
+
+**PILOTO_TESTES_1:**
+
+ 
+**Teste 1:** 
+Modelo: gpt-5-2025-08-07
+reasoning_effort="minimal",
+max_completion_tokens=256
+Resultado: Segundo melhor resultado entre os GPTs 5.
+
+
+**Teste 2:** 
+Modelo: gpt-5-2025-08-07
+reasoning_effort="medium",
+max_completion_tokens=512
+Resultado: Pior resultado entre os modelos GPT 5. Modelo não respondeu algumas perguntas. Aumentar tokens.
+
+
+**Teste 3:** 
+Modelo: gpt-5-2025-08-07
+reasoning_effort="low",
+max_completion_tokens= 1024
+verbosity="low"
+Resultado: Melhor resultado entre os modelos GPT 5 quando avaliada a média. Aumentar os tokens.
+
+
 **Teste 1:**
+Modelo: gpt-6-astra
 Parâmetros do estudo:
 reasoning.effort: low
 max_completion_tokens: 512
@@ -69,6 +98,7 @@ Resultado: Tokens suficientes.
 
 
 **Teste 2:**
+Modelo: gpt-6-astra
 Parâmetros do estudo:
 reasoning.effort: high
 max_completion_tokens: 1024
@@ -78,24 +108,9 @@ Resultado: Tokens suficientes. Resultado melhor, mas pouca diferença.
 
 
 
-**Modelo:** GPT 5.6
-**Versão:** Terra
-A versão Terra é o ponto intermediário na família GPT-5.6. É significativamente mais capaz que Luna, ao mesmo tempo que é consideravelmente mais barato e mais rápido que Sol. Foi escolhido por custo X eficiência em comparação aos demais modelos GPT 5.6.
-**Custo Estimado:** US$ 5,17
-**Informações:**
-
-**Fonte:** https://developers.openai.com/api/docs/models/gpt-5.6-terra; 
 
 
-
-
-
-
-
-
-
-
-**TESTES_2:**
+**PILOTO_TESTES_2:**
 
 
 **TESTE 01**
@@ -135,7 +150,7 @@ max_completion_tokens: 1600
 
 
 
-
+**Resultados Piloto 2:** Tive que aumentar o número de tokens do gpt-5-2025-08-07, o que acabou deixando caro os testes com esse modelo. Ambos os testes com o GPT 5 tiveram, cada um, uma resposta textual, sem score, que coloquei como NA. Para fazer a parte estatística, retirei a linha que continha os NAs da análise. Todos os modelos testados exibiram um viés forte de auto-expressão e de valores seculares-racionais.
 
 
 
@@ -148,8 +163,10 @@ max_completion_tokens: 1600
 
 
 **CONDIDERAÇÕES FINAIS E JUSTIFICATIVA DAS ESCOLHAS**
+Observação: em todos estou utilizando a chat completions API. Priorizei os parâmetros de reasoning effort como low ou medium em virtude na não necessidade de alto esforço para a tarefa solicitada.
 
 Considerando que estou solicitando ao modelo apenas as respostas, de forma direta, considera-se que deve-se utilizar o parâmetro de reasoning effort low. Modelo GPT 5 foi menos eficiente nas respostas considerando o uso de tokens. O parâmetro max_completion_tokens estabelece o número máximo de tokens que podem ser gerados na conclusão. Nos modelos que utilizam tokens internos de raciocínio, esses tokens também entram nesse limite.
+
 Imagine que você configure max_completion_tokens=1024:
 - Parte dos tokens pode ser utilizada no raciocínio interno do modelo.
 - Outra parte pode ser utilizada na resposta final visível.
