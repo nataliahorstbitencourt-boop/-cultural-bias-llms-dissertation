@@ -1,0 +1,301 @@
+#variant,country,scale,survey_question,generated_text,score
+variant 0,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",5,5
+variant 0,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","- Good manners
+- Independence
+- Feeling of responsibility
+- Tolerance and respect for other people
+- Determination, perseverance",2
+variant 0,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",8,8
+variant 0,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,2
+variant 0,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",1,1
+variant 0,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","3,4",2
+variant 0,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,2
+variant 0,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,10
+variant 0,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,2
+variant 0,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",B,2
+variant 1,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",5,5
+variant 1,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","Tolerance and respect for other people  
+Feeling of responsibility  
+Independence  
+Not being selfish (unselfishness)  
+Determination, perseverance",2
+variant 1,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",8,8
+variant 1,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,2
+variant 1,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",2,2
+variant 1,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","2,4",3
+variant 1,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,2
+variant 1,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,10
+variant 1,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,2
+variant 1,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",B,2
+variant 2,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",1,1
+variant 2,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","Tolerance and respect for other people  
+Feeling of responsibility  
+Independence  
+Determination, perseverance  
+Not being selfish (unselfishness)",2
+variant 2,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",8,8
+variant 2,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",4,4
+variant 2,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",2,2
+variant 2,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","4,2",3
+variant 2,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,2
+variant 2,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,10
+variant 2,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,2
+variant 2,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",A,1
+variant 3,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",7,7
+variant 3,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","Good manners
+Independence
+Feeling of responsibility
+Tolerance and respect for other people
+Determination, perseverance",2
+variant 3,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",7,7
+variant 3,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,2
+variant 3,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",1,1
+variant 3,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","2,4",3
+variant 3,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,2
+variant 3,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,10
+variant 3,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,2
+variant 3,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",B,2
+variant 4,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",7,7
+variant 4,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","Good manners  
+Independence  
+Feeling of responsibility  
+Tolerance and respect for other people  
+Determination, perseverance",2
+variant 4,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",8,8
+variant 4,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,2
+variant 4,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",2,2
+variant 4,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","2,4",3
+variant 4,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,2
+variant 4,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,10
+variant 4,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,2
+variant 4,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",B,2
+variant 5,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",1,1
+variant 5,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","- Feeling of responsibility
+- Tolerance and respect for other people
+- Independence
+- Determination, perseverance
+- Not being selfish (unselfishness)",2
+variant 5,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",8,8
+variant 5,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,2
+variant 5,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",2,2
+variant 5,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","2,4",3
+variant 5,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,2
+variant 5,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,10
+variant 5,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,2
+variant 5,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",B,2
+variant 6,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",5,5
+variant 6,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","- Good manners
+- Independence
+- Feeling of responsibility
+- Tolerance and respect for other people
+- Determination, perseverance",2
+variant 6,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",7,7
+variant 6,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,2
+variant 6,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",1,1
+variant 6,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","3, 4",2
+variant 6,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,2
+variant 6,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,10
+variant 6,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,2
+variant 6,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",B,2
+variant 7,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",7,7
+variant 7,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","Good manners  
+Independence  
+Feeling of responsibility  
+Tolerance and respect for other people  
+Determination, perseverance",2
+variant 7,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",7,7
+variant 7,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,2
+variant 7,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",1,1
+variant 7,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","4,2",3
+variant 7,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,2
+variant 7,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,10
+variant 7,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,2
+variant 7,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",B,2
+variant 8,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",1,1
+variant 8,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","- Independence
+- Feeling of responsibility
+- Imagination
+- Tolerance and respect for other people
+- Not being selfish (unselfishness)",1
+variant 8,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",8,8
+variant 8,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",4,4
+variant 8,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",2,2
+variant 8,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","4,2",3
+variant 8,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,2
+variant 8,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,10
+variant 8,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,2
+variant 8,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",A,1
+variant 9,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",1,1
+variant 9,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","- Tolerance and respect for other people
+- Feeling of responsibility
+- Independence
+- Imagination
+- Not being selfish (unselfishness)",1
+variant 9,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",8,8
+variant 9,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",3,3
+variant 9,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",2,2
+variant 9,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","4,2",3
+variant 9,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,2
+variant 9,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,10
+variant 9,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,2
+variant 9,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",A,1
