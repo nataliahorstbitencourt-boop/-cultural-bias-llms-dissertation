@@ -14,7 +14,7 @@ Os autores fizeram às versões do GPT (GPT-3, 3.5-turbo, 4, 4-turbo e 4o) as 10
 
 Para avançar o estudo dos autores, propõem-se, posteriormente, testar as mesmas questões com subgrupos sociodemográficos.
 
-A pasta data/original_article tem os scripts e csvs para fazer a rodagem. Está dividida pela parte sem cultural prompting e com cultural prompting. A pasta resultados contém os resultados dos dois testes preliminares que eu realizei (Piloto 1 e Piloto 2). Os parâmetros usados nesses testes podem ser encontrados no arquivo "Procedures". E a pasta scripts R tem os scripts do R para fazer a análise estatística. 
+A pasta data/original_article tem os scripts e csvs para fazer a rodagem. Está dividida pela parte sem cultural prompting e com cultural prompting. A pasta resultados contém os resultados dos dois testes preliminares que eu realizei (Piloto 1 e Piloto 2). Coloquei apenas os resultados do Piloto 2, nessa pasta. Os parâmetros usados nesses testes podem ser encontrados no arquivo "Procedures". E a pasta scripts R tem os scripts do R para fazer a análise estatística. 
 
 
 
