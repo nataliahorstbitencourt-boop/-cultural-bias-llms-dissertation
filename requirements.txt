@@ -1,0 +1,4 @@
+# Bibliotecas Python necessárias para rodar o pipeline (braço de controle).
+# Versões testadas e validadas neste projeto.
+openai==3.31.0
+pandas==3.0.6
