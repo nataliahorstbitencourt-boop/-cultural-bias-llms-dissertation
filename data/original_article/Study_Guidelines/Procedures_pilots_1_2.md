@@ -135,7 +135,7 @@ max_completion_tokens: 1600
 
 
 
-**Resultados Piloto 2:** Tive que aumentar o número de tokens do gpt-5-2025-08-07, o que acabou deixando caro os testes com esse modelo. Ambos os testes com o GPT 5 tiveram, cada um, uma resposta textual, sem score, que coloquei como NA. Para fazer a parte estatística, retirei a linha que continha os NAs da análise. Todos os modelos testados exibiram um viés forte de auto-expressão e de valores seculares-racionais.
+**Resultados Piloto 2:** Tive que aumentar o número de tokens do gpt-5-2025-08-07, o que acabou deixando caro os testes com esse modelo. Ambos os testes com o GPT 5 tiveram, cada um, uma resposta textual, sem score, que coloquei como NA. Para fazer a parte estatística, retirei a linha que continha os NAs da análise. Todos os modelos testados exibiram um viés forte de auto-expressão e de valores seculares-racionais. Em geral, os modelos com low reasoning effort apresentaram resultados melhores.
 
 
 
