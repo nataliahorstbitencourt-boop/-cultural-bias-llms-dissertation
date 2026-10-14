@@ -6,7 +6,7 @@
 
 **LINK TEXTO QUALIFICAÇÃO:** https://docs.google.com/document/d/199j48Bk4fyCIyiN_NmwbA02D7XNCNMY5DnzYmmYRV20/edit?usp=sharing<br>
 
- 
+**Outros links relevantes:** https://www.worldvaluessurvey.org/WVSContents.jsp?CMSID=autonomous
  
 A minha ideia para a dissertação é replicar o estudo com versões mais recentes dos modelos OPENAI. O objetivo dos autores foi verificar se quais valores culturais os modelos de linguagem da OpenAI representam e se o “cultural prompting” (pedir ao modelo que responda como alguém de um país específico) reduz esse viés. 
 
