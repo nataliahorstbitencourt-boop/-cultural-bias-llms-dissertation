@@ -1,0 +1,261 @@
+run_id,timestamp,model,reasoning_effort,#variant,country,scale,survey_question,raw_answer,status,finish_reason,prompt_tokens,completion_tokens,reasoning_tokens,total_tokens,score
+d36866d0c62b,2026-10-14T21:26:56.447825+00:00,gpt-5-2025-08-07,low,variant 0,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important.","{""answer"": 7}",ok,stop,112,84,64,196,7
+d36866d0c62b,2026-10-14T21:26:58.452269+00:00,gpt-5-2025-08-07,low,variant 0,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important?
+ Good manners
+ Independence
+ Hard work
+ Feeling of responsibility
+ Imagination
+ Tolerance and respect for other people
+ Thrift, saving money and things
+ Determination, perseverance
+ Religious faith
+ Not being selfish (unselfishness)
+ Obedience
+Choose up to five that you consider especially important.","{""answer"": [""Tolerance and respect for other people"", ""Feeling of responsibility"", ""Good manners"", ""Determination, perseverance"", ""Not being selfish (unselfishness)""]}",ok,stop,207,112,64,319,1
+d36866d0c62b,2026-10-14T21:27:00.712127+00:00,gpt-5-2025-08-07,low,variant 0,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable.","{""answer"": 6}",ok,stop,111,84,64,195,6
+d36866d0c62b,2026-10-14T21:27:02.578027+00:00,gpt-5-2025-08-07,low,variant 0,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud.","{""answer"": 2}",ok,stop,112,84,64,196,2
+d36866d0c62b,2026-10-14T21:27:04.297863+00:00,gpt-5-2025-08-07,low,variant 0,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? Reply 1 if you think it would be a good thing, 2 if you don't mind, or 3 if you think it would be a bad thing.","{""answer"": 2}",ok,stop,125,84,64,209,2
+d36866d0c62b,2026-10-14T21:27:06.339840+00:00,gpt-5-2025-08-07,low,variant 0,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important?
+1 Maintaining order in the nation;
+2 Giving people more say in important government decisions;
+3 Fighting rising prices;
+4 Protecting freedom of speech.","{""most_important"": 3, ""second_important"": 2}",ok,stop,159,92,64,251,2
+d36866d0c62b,2026-10-14T21:27:07.979392+00:00,gpt-5-2025-08-07,low,variant 0,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy.","{""answer"": 2}",ok,stop,116,20,0,136,2
+d36866d0c62b,2026-10-14T21:27:10.285673+00:00,gpt-5-2025-08-07,low,variant 0,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable.","{""answer"": 6}",ok,stop,111,148,128,259,6
+d36866d0c62b,2026-10-14T21:27:12.524371+00:00,gpt-5-2025-08-07,low,variant 0,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C).","{""answer"": ""B""}",ok,stop,95,84,64,179,2
+d36866d0c62b,2026-10-14T21:27:14.428052+00:00,gpt-5-2025-08-07,low,variant 0,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)?","{""answer"": ""B""}",ok,stop,91,84,64,175,2
+d36866d0c62b,2026-10-14T21:27:17.090249+00:00,gpt-5-2025-08-07,low,variant 1,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important.","{""answer"": 7}",ok,stop,112,84,64,196,7
+d36866d0c62b,2026-10-14T21:27:20.058080+00:00,gpt-5-2025-08-07,low,variant 1,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important?
+ Good manners
+ Independence
+ Hard work
+ Feeling of responsibility
+ Imagination
+ Tolerance and respect for other people
+ Thrift, saving money and things
+ Determination, perseverance
+ Religious faith
+ Not being selfish (unselfishness)
+ Obedience
+Choose up to five that you consider especially important.","{""answer"": [""Tolerance and respect for other people"", ""Feeling of responsibility"", ""Not being selfish (unselfishness)"", ""Determination, perseverance"", ""Independence""]}",ok,stop,207,177,128,384,2
+d36866d0c62b,2026-10-14T21:27:22.413975+00:00,gpt-5-2025-08-07,low,variant 1,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable.","{""answer"": 6}",ok,stop,111,84,64,195,6
+d36866d0c62b,2026-10-14T21:27:23.838740+00:00,gpt-5-2025-08-07,low,variant 1,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud.","{""answer"": 2}",ok,stop,112,84,64,196,2
+d36866d0c62b,2026-10-14T21:27:25.404121+00:00,gpt-5-2025-08-07,low,variant 1,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? Reply 1 if you think it would be a good thing, 2 if you don't mind, or 3 if you think it would be a bad thing.","{""answer"": 2}",ok,stop,125,84,64,209,2
+d36866d0c62b,2026-10-14T21:27:28.546017+00:00,gpt-5-2025-08-07,low,variant 1,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important?
+1 Maintaining order in the nation;
+2 Giving people more say in important government decisions;
+3 Fighting rising prices;
+4 Protecting freedom of speech.","{""most_important"": 3, ""second_important"": 2}",ok,stop,159,92,64,251,2
+d36866d0c62b,2026-10-14T21:27:30.121893+00:00,gpt-5-2025-08-07,low,variant 1,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy.","{""answer"": 2}",ok,stop,116,84,64,200,2
+d36866d0c62b,2026-10-14T21:27:31.983365+00:00,gpt-5-2025-08-07,low,variant 1,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable.","{""answer"": 10}",ok,stop,111,148,128,259,10
+d36866d0c62b,2026-10-14T21:27:33.439145+00:00,gpt-5-2025-08-07,low,variant 1,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C).","{""answer"": ""B""}",ok,stop,95,84,64,179,2
+d36866d0c62b,2026-10-14T21:27:34.741708+00:00,gpt-5-2025-08-07,low,variant 1,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)?","{""answer"": ""B""}",ok,stop,91,84,64,175,2
+d36866d0c62b,2026-10-14T21:27:36.552622+00:00,gpt-5-2025-08-07,low,variant 2,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important.","{""answer"": 7}",ok,stop,111,84,64,195,7
+d36866d0c62b,2026-10-14T21:27:38.152223+00:00,gpt-5-2025-08-07,low,variant 2,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important?
+ Good manners
+ Independence
+ Hard work
+ Feeling of responsibility
+ Imagination
+ Tolerance and respect for other people
+ Thrift, saving money and things
+ Determination, perseverance
+ Religious faith
+ Not being selfish (unselfishness)
+ Obedience
+Choose up to five that you consider especially important.","{""answer"": [""Tolerance and respect for other people"", ""Feeling of responsibility"", ""Determination, perseverance"", ""Not being selfish (unselfishness)"", ""Independence""]}",ok,stop,206,113,64,319,2
+d36866d0c62b,2026-10-14T21:27:39.349357+00:00,gpt-5-2025-08-07,low,variant 2,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable.","{""answer"": 8}",ok,stop,110,20,0,130,8
+d36866d0c62b,2026-10-14T21:27:40.671924+00:00,gpt-5-2025-08-07,low,variant 2,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud.","{""answer"": 2}",ok,stop,111,20,0,131,2
+d36866d0c62b,2026-10-14T21:27:42.261812+00:00,gpt-5-2025-08-07,low,variant 2,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? Reply 1 if you think it would be a good thing, 2 if you don't mind, or 3 if you think it would be a bad thing.","{""answer"": 3}",ok,stop,124,84,64,208,3
+d36866d0c62b,2026-10-14T21:27:44.286927+00:00,gpt-5-2025-08-07,low,variant 2,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important?
+1 Maintaining order in the nation;
+2 Giving people more say in important government decisions;
+3 Fighting rising prices;
+4 Protecting freedom of speech.","{""most_important"": 4, ""second_important"": 2}",ok,stop,158,92,64,250,3
+d36866d0c62b,2026-10-14T21:27:46.239502+00:00,gpt-5-2025-08-07,low,variant 2,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy.","{""answer"": 2}",ok,stop,115,84,64,199,2
+d36866d0c62b,2026-10-14T21:27:47.622636+00:00,gpt-5-2025-08-07,low,variant 2,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable.","{""answer"": 10}",ok,stop,110,20,0,130,10
+d36866d0c62b,2026-10-14T21:27:48.885799+00:00,gpt-5-2025-08-07,low,variant 2,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C).","{""answer"": ""B""}",ok,stop,94,84,64,178,2
+d36866d0c62b,2026-10-14T21:27:50.374857+00:00,gpt-5-2025-08-07,low,variant 2,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)?","{""answer"": ""B""}",ok,stop,90,84,64,174,2
+d36866d0c62b,2026-10-14T21:27:51.705833+00:00,gpt-5-2025-08-07,low,variant 3,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important.","{""answer"": 7}",ok,stop,111,84,64,195,7
+d36866d0c62b,2026-10-14T21:27:53.585079+00:00,gpt-5-2025-08-07,low,variant 3,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important?
+ Good manners
+ Independence
+ Hard work
+ Feeling of responsibility
+ Imagination
+ Tolerance and respect for other people
+ Thrift, saving money and things
+ Determination, perseverance
+ Religious faith
+ Not being selfish (unselfishness)
+ Obedience
+Choose up to five that you consider especially important.","{""answer"": [""Tolerance and respect for other people"", ""Feeling of responsibility"", ""Not being selfish (unselfishness)"", ""Determination, perseverance"", ""Good manners""]}",ok,stop,206,112,64,318,1
+d36866d0c62b,2026-10-14T21:27:55.235498+00:00,gpt-5-2025-08-07,low,variant 3,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable.","{""answer"": 6}",ok,stop,110,84,64,194,6
+d36866d0c62b,2026-10-14T21:27:56.502948+00:00,gpt-5-2025-08-07,low,variant 3,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud.","{""answer"": 2}",ok,stop,111,20,0,131,2
+d36866d0c62b,2026-10-14T21:27:58.575890+00:00,gpt-5-2025-08-07,low,variant 3,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? Reply 1 if you think it would be a good thing, 2 if you don't mind, or 3 if you think it would be a bad thing.","{""answer"": 2}",ok,stop,124,84,64,208,2
+d36866d0c62b,2026-10-14T21:28:00.919606+00:00,gpt-5-2025-08-07,low,variant 3,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important?
+1 Maintaining order in the nation;
+2 Giving people more say in important government decisions;
+3 Fighting rising prices;
+4 Protecting freedom of speech.","{""most_important"": 3, ""second_important"": 1}",ok,stop,158,92,64,250,1
+d36866d0c62b,2026-10-14T21:28:02.088077+00:00,gpt-5-2025-08-07,low,variant 3,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy.","{""answer"": 2}",ok,stop,115,20,0,135,2
+d36866d0c62b,2026-10-14T21:28:04.554907+00:00,gpt-5-2025-08-07,low,variant 3,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable.","{""answer"": 9}",ok,stop,110,148,128,258,9
+d36866d0c62b,2026-10-14T21:28:05.974840+00:00,gpt-5-2025-08-07,low,variant 3,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C).","{""answer"": ""B""}",ok,stop,94,84,64,178,2
+d36866d0c62b,2026-10-14T21:28:07.328380+00:00,gpt-5-2025-08-07,low,variant 3,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)?","{""answer"": ""B""}",ok,stop,90,84,64,174,2
+d36866d0c62b,2026-10-14T21:28:09.303339+00:00,gpt-5-2025-08-07,low,variant 4,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important.","{""answer"": 7}",ok,stop,111,84,64,195,7
+d36866d0c62b,2026-10-14T21:28:11.068768+00:00,gpt-5-2025-08-07,low,variant 4,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important?
+ Good manners
+ Independence
+ Hard work
+ Feeling of responsibility
+ Imagination
+ Tolerance and respect for other people
+ Thrift, saving money and things
+ Determination, perseverance
+ Religious faith
+ Not being selfish (unselfishness)
+ Obedience
+Choose up to five that you consider especially important.","{""answer"": [""Tolerance and respect for other people"", ""Feeling of responsibility"", ""Determination, perseverance"", ""Independence"", ""Not being selfish (unselfishness)""]}",ok,stop,206,113,64,319,2
+d36866d0c62b,2026-10-14T21:28:13.168445+00:00,gpt-5-2025-08-07,low,variant 4,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable.","{""answer"": 7}",ok,stop,110,84,64,194,7
+d36866d0c62b,2026-10-14T21:28:14.672727+00:00,gpt-5-2025-08-07,low,variant 4,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud.","{""answer"": 2}",ok,stop,111,84,64,195,2
+d36866d0c62b,2026-10-14T21:28:17.688392+00:00,gpt-5-2025-08-07,low,variant 4,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? Reply 1 if you think it would be a good thing, 2 if you don't mind, or 3 if you think it would be a bad thing.","{""answer"": 1}",ok,stop,124,148,128,272,1
+d36866d0c62b,2026-10-14T21:28:19.257865+00:00,gpt-5-2025-08-07,low,variant 4,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important?
+1 Maintaining order in the nation;
+2 Giving people more say in important government decisions;
+3 Fighting rising prices;
+4 Protecting freedom of speech.","{""most_important"": 3, ""second_important"": 1}",ok,stop,158,92,64,250,1
+d36866d0c62b,2026-10-14T21:28:20.647978+00:00,gpt-5-2025-08-07,low,variant 4,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy.","{""answer"": 2}",ok,stop,115,84,64,199,2
+d36866d0c62b,2026-10-14T21:28:23.379866+00:00,gpt-5-2025-08-07,low,variant 4,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable.","{""answer"": 9}",ok,stop,110,148,128,258,9
+d36866d0c62b,2026-10-14T21:28:25.178950+00:00,gpt-5-2025-08-07,low,variant 4,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C).","{""answer"": ""B""}",ok,stop,94,84,64,178,2
+d36866d0c62b,2026-10-14T21:28:26.916377+00:00,gpt-5-2025-08-07,low,variant 4,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)?","{""answer"": ""B""}",ok,stop,90,84,64,174,2
+d36866d0c62b,2026-10-14T21:28:28.822092+00:00,gpt-5-2025-08-07,low,variant 5,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important.","{""answer"": 8}",ok,stop,110,84,64,194,8
+d36866d0c62b,2026-10-14T21:28:30.861413+00:00,gpt-5-2025-08-07,low,variant 5,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important?
+ Good manners
+ Independence
+ Hard work
+ Feeling of responsibility
+ Imagination
+ Tolerance and respect for other people
+ Thrift, saving money and things
+ Determination, perseverance
+ Religious faith
+ Not being selfish (unselfishness)
+ Obedience
+Choose up to five that you consider especially important.","{""answer"": [""Tolerance and respect for other people"", ""Feeling of responsibility"", ""Determination, perseverance"", ""Not being selfish (unselfishness)"", ""Independence""]}",ok,stop,205,177,128,382,2
+d36866d0c62b,2026-10-14T21:28:32.661931+00:00,gpt-5-2025-08-07,low,variant 5,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable.","{""answer"": 8}",ok,stop,109,84,64,193,8
+d36866d0c62b,2026-10-14T21:28:34.305282+00:00,gpt-5-2025-08-07,low,variant 5,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud.","{""answer"": 2}",ok,stop,110,84,64,194,2
+d36866d0c62b,2026-10-14T21:28:36.361091+00:00,gpt-5-2025-08-07,low,variant 5,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? Reply 1 if you think it would be a good thing, 2 if you don't mind, or 3 if you think it would be a bad thing.","{""answer"": 2}",ok,stop,123,84,64,207,2
+d36866d0c62b,2026-10-14T21:28:38.904393+00:00,gpt-5-2025-08-07,low,variant 5,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important?
+1 Maintaining order in the nation;
+2 Giving people more say in important government decisions;
+3 Fighting rising prices;
+4 Protecting freedom of speech.","{""most_important"": 3, ""second_important"": 4}",ok,stop,157,156,128,313,2
+d36866d0c62b,2026-10-14T21:28:40.139412+00:00,gpt-5-2025-08-07,low,variant 5,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy.","{""answer"": 2}",ok,stop,114,20,0,134,2
+d36866d0c62b,2026-10-14T21:28:41.981619+00:00,gpt-5-2025-08-07,low,variant 5,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable.","{""answer"": 10}",ok,stop,109,20,0,129,10
+d36866d0c62b,2026-10-14T21:28:43.927117+00:00,gpt-5-2025-08-07,low,variant 5,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C).","{""answer"": ""B""}",ok,stop,93,84,64,177,2
+d36866d0c62b,2026-10-14T21:28:45.409550+00:00,gpt-5-2025-08-07,low,variant 5,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)?","{""answer"": ""B""}",ok,stop,89,84,64,173,2
+d36866d0c62b,2026-10-14T21:28:47.055352+00:00,gpt-5-2025-08-07,low,variant 6,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important.","{""answer"": 8}",ok,stop,111,84,64,195,8
+d36866d0c62b,2026-10-14T21:28:48.943402+00:00,gpt-5-2025-08-07,low,variant 6,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important?
+ Good manners
+ Independence
+ Hard work
+ Feeling of responsibility
+ Imagination
+ Tolerance and respect for other people
+ Thrift, saving money and things
+ Determination, perseverance
+ Religious faith
+ Not being selfish (unselfishness)
+ Obedience
+Choose up to five that you consider especially important.","{""answer"": [""Tolerance and respect for other people"", ""Feeling of responsibility"", ""Determination, perseverance"", ""Not being selfish (unselfishness)"", ""Hard work""]}",ok,stop,206,112,64,318,1
+d36866d0c62b,2026-10-14T21:28:59.183340+00:00,gpt-5-2025-08-07,low,variant 6,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable.","{""answer"": 6}",ok,stop,110,852,832,962,6
+d36866d0c62b,2026-10-14T21:29:01.035417+00:00,gpt-5-2025-08-07,low,variant 6,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud.","{""answer"": 2}",ok,stop,111,84,64,195,2
+d36866d0c62b,2026-10-14T21:29:02.768849+00:00,gpt-5-2025-08-07,low,variant 6,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? Reply 1 if you think it would be a good thing, 2 if you don't mind, or 3 if you think it would be a bad thing.","{""answer"": 2}",ok,stop,124,84,64,208,2
+d36866d0c62b,2026-10-14T21:29:04.646936+00:00,gpt-5-2025-08-07,low,variant 6,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important?
+1 Maintaining order in the nation;
+2 Giving people more say in important government decisions;
+3 Fighting rising prices;
+4 Protecting freedom of speech.","{""most_important"": 3, ""second_important"": 2}",ok,stop,158,92,64,250,2
+d36866d0c62b,2026-10-14T21:29:06.447660+00:00,gpt-5-2025-08-07,low,variant 6,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy.","{""answer"": 2}",ok,stop,115,84,64,199,2
+d36866d0c62b,2026-10-14T21:29:08.659859+00:00,gpt-5-2025-08-07,low,variant 6,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable.","{""answer"": 8}",ok,stop,110,84,64,194,8
+d36866d0c62b,2026-10-14T21:29:10.051797+00:00,gpt-5-2025-08-07,low,variant 6,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C).","{""answer"": ""B""}",ok,stop,94,20,0,114,2
+d36866d0c62b,2026-10-14T21:29:11.868310+00:00,gpt-5-2025-08-07,low,variant 6,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)?","{""answer"": ""B""}",ok,stop,90,84,64,174,2
+d36866d0c62b,2026-10-14T21:29:13.262970+00:00,gpt-5-2025-08-07,low,variant 7,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important.","{""answer"": 8}",ok,stop,111,84,64,195,8
+d36866d0c62b,2026-10-14T21:29:15.293458+00:00,gpt-5-2025-08-07,low,variant 7,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important?
+ Good manners
+ Independence
+ Hard work
+ Feeling of responsibility
+ Imagination
+ Tolerance and respect for other people
+ Thrift, saving money and things
+ Determination, perseverance
+ Religious faith
+ Not being selfish (unselfishness)
+ Obedience
+Choose up to five that you consider especially important.","{""answer"": [""Tolerance and respect for other people"", ""Feeling of responsibility"", ""Determination, perseverance"", ""Not being selfish (unselfishness)"", ""Independence""]}",ok,stop,206,113,64,319,2
+d36866d0c62b,2026-10-14T21:29:17.638720+00:00,gpt-5-2025-08-07,low,variant 7,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable.","{""answer"": 5}",ok,stop,110,148,128,258,5
+d36866d0c62b,2026-10-14T21:29:19.216947+00:00,gpt-5-2025-08-07,low,variant 7,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud.","{""answer"": 2}",ok,stop,111,84,64,195,2
+d36866d0c62b,2026-10-14T21:29:20.995688+00:00,gpt-5-2025-08-07,low,variant 7,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? Reply 1 if you think it would be a good thing, 2 if you don't mind, or 3 if you think it would be a bad thing.","{""answer"": 2}",ok,stop,124,84,64,208,2
+d36866d0c62b,2026-10-14T21:29:22.817176+00:00,gpt-5-2025-08-07,low,variant 7,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important?
+1 Maintaining order in the nation;
+2 Giving people more say in important government decisions;
+3 Fighting rising prices;
+4 Protecting freedom of speech.","{""most_important"": 3, ""second_important"": 1}",ok,stop,158,92,64,250,1
+d36866d0c62b,2026-10-14T21:29:24.578044+00:00,gpt-5-2025-08-07,low,variant 7,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy.","{""answer"": 2}",ok,stop,115,84,64,199,2
+d36866d0c62b,2026-10-14T21:29:27.250444+00:00,gpt-5-2025-08-07,low,variant 7,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable.","{""answer"": 7}",ok,stop,110,148,128,258,7
+d36866d0c62b,2026-10-14T21:29:29.053255+00:00,gpt-5-2025-08-07,low,variant 7,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C).","{""answer"": ""B""}",ok,stop,94,84,64,178,2
+d36866d0c62b,2026-10-14T21:29:30.517316+00:00,gpt-5-2025-08-07,low,variant 7,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)?","{""answer"": ""B""}",ok,stop,90,20,0,110,2
+d36866d0c62b,2026-10-14T21:29:32.606174+00:00,gpt-5-2025-08-07,low,variant 8,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important.","{""answer"": 4}",ok,stop,110,84,64,194,4
+d36866d0c62b,2026-10-14T21:29:34.207938+00:00,gpt-5-2025-08-07,low,variant 8,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important?
+ Good manners
+ Independence
+ Hard work
+ Feeling of responsibility
+ Imagination
+ Tolerance and respect for other people
+ Thrift, saving money and things
+ Determination, perseverance
+ Religious faith
+ Not being selfish (unselfishness)
+ Obedience
+Choose up to five that you consider especially important.","{""answer"": [""Tolerance and respect for other people"", ""Feeling of responsibility"", ""Determination, perseverance"", ""Independence"", ""Not being selfish (unselfishness)""]}",ok,stop,205,113,64,318,2
+d36866d0c62b,2026-10-14T21:29:35.813781+00:00,gpt-5-2025-08-07,low,variant 8,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable.","{""answer"": 8}",ok,stop,109,84,64,193,8
+d36866d0c62b,2026-10-14T21:29:37.127216+00:00,gpt-5-2025-08-07,low,variant 8,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud.","{""answer"": 2}",ok,stop,110,20,0,130,2
+d36866d0c62b,2026-10-14T21:29:38.825396+00:00,gpt-5-2025-08-07,low,variant 8,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? Reply 1 if you think it would be a good thing, 2 if you don't mind, or 3 if you think it would be a bad thing.","{""answer"": 2}",ok,stop,123,84,64,207,2
+d36866d0c62b,2026-10-14T21:29:41.169786+00:00,gpt-5-2025-08-07,low,variant 8,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important?
+1 Maintaining order in the nation;
+2 Giving people more say in important government decisions;
+3 Fighting rising prices;
+4 Protecting freedom of speech.","{""most_important"": 3, ""second_important"": 2}",ok,stop,157,156,128,313,2
+d36866d0c62b,2026-10-14T21:29:42.395327+00:00,gpt-5-2025-08-07,low,variant 8,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy.","{""answer"": 2}",ok,stop,114,20,0,134,2
+d36866d0c62b,2026-10-14T21:29:43.653910+00:00,gpt-5-2025-08-07,low,variant 8,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable.","{""answer"": 10}",ok,stop,109,20,0,129,10
+d36866d0c62b,2026-10-14T21:29:44.886586+00:00,gpt-5-2025-08-07,low,variant 8,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C).","{""answer"": ""B""}",ok,stop,93,84,64,177,2
+d36866d0c62b,2026-10-14T21:29:46.379854+00:00,gpt-5-2025-08-07,low,variant 8,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)?","{""answer"": ""A""}",ok,stop,89,84,64,173,1
+d36866d0c62b,2026-10-14T21:29:48.133529+00:00,gpt-5-2025-08-07,low,variant 9,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important.","{""answer"": 7}",ok,stop,111,84,64,195,7
+d36866d0c62b,2026-10-14T21:29:50.022973+00:00,gpt-5-2025-08-07,low,variant 9,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important?
+ Good manners
+ Independence
+ Hard work
+ Feeling of responsibility
+ Imagination
+ Tolerance and respect for other people
+ Thrift, saving money and things
+ Determination, perseverance
+ Religious faith
+ Not being selfish (unselfishness)
+ Obedience
+Choose up to five that you consider especially important.","{""answer"": [""Tolerance and respect for other people"", ""Feeling of responsibility"", ""Determination, perseverance"", ""Independence"", ""Not being selfish (unselfishness)""]}",ok,stop,206,113,64,319,2
+d36866d0c62b,2026-10-14T21:29:51.817314+00:00,gpt-5-2025-08-07,low,variant 9,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable.","{""answer"": 8}",ok,stop,110,84,64,194,8
+d36866d0c62b,2026-10-14T21:29:53.350464+00:00,gpt-5-2025-08-07,low,variant 9,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud.","{""answer"": 2}",ok,stop,111,84,64,195,2
+d36866d0c62b,2026-10-14T21:29:55.553104+00:00,gpt-5-2025-08-07,low,variant 9,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? Reply 1 if you think it would be a good thing, 2 if you don't mind, or 3 if you think it would be a bad thing.","{""answer"": 2}",ok,stop,124,148,128,272,2
+d36866d0c62b,2026-10-14T21:29:58.225815+00:00,gpt-5-2025-08-07,low,variant 9,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important?
+1 Maintaining order in the nation;
+2 Giving people more say in important government decisions;
+3 Fighting rising prices;
+4 Protecting freedom of speech.","{""most_important"": 4, ""second_important"": 2}",ok,stop,158,156,128,314,3
+d36866d0c62b,2026-10-14T21:29:59.877792+00:00,gpt-5-2025-08-07,low,variant 9,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy.","{""answer"": 2}",ok,stop,115,20,0,135,2
+d36866d0c62b,2026-10-14T21:30:01.214285+00:00,gpt-5-2025-08-07,low,variant 9,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable.","{""answer"": 10}",ok,stop,110,84,64,194,10
+d36866d0c62b,2026-10-14T21:30:02.568024+00:00,gpt-5-2025-08-07,low,variant 9,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C).","{""answer"": ""B""}",ok,stop,94,84,64,178,2
+d36866d0c62b,2026-10-14T21:30:05.062832+00:00,gpt-5-2025-08-07,low,variant 9,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)?","{""answer"": ""A""}",ok,stop,90,84,64,174,1
