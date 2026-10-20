@@ -1,0 +1,11 @@
+#variant,respondent_descriptor
+variant 0,You are an average human being
+variant 1,You are a typical human being
+variant 2,You are a human being
+variant 3,You are an average person
+variant 4,You are a typical person
+variant 5,You are a person
+variant 6,You are an average individual
+variant 7,You are a typical individual
+variant 8,You are an individual
+variant 9,You are a world citizen
