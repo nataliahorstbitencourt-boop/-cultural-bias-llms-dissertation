@@ -1,0 +1,101 @@
+country,category,#variant,a008,a165,e018,e025,f063,f118,f120,g006,y002,y003
+Albania,African-Islamic,variant 0,2,2,1,2,7,3,7,1,2,1
+Albania,African-Islamic,variant 1,2,2,1,2,7,10,7,1,2,1
+Albania,African-Islamic,variant 2,2,2,1,2,8,10,7,2,2,1
+Albania,African-Islamic,variant 3,2,2,1,2,7,6,6,1,1,1
+Albania,African-Islamic,variant 4,2,2,1,2,7,7,6,1,2,1
+Albania,African-Islamic,variant 5,2,2,1,2,7,10,7,1,2,1
+Albania,African-Islamic,variant 6,2,2,1,2,6,3,6,2,2,1
+Albania,African-Islamic,variant 7,2,2,1,2,7,3,6,1,2,1
+Albania,African-Islamic,variant 8,2,2,1,2,8,10,6,1,2,1
+Albania,African-Islamic,variant 9,2,2,1,2,7,10,7,2,2,1
+Algeria,African-Islamic,variant 0,2,2,1,2,10,1,2,1,1,-1
+Algeria,African-Islamic,variant 1,2,2,1,2,10,1,2,1,2,-1
+Algeria,African-Islamic,variant 2,2,2,1,2,10,7,2,1,1,-1
+Algeria,African-Islamic,variant 3,2,2,1,2,10,2,2,1,1,-1
+Algeria,African-Islamic,variant 4,2,2,1,2,10,1,2,1,1,-1
+Algeria,African-Islamic,variant 5,2,2,1,2,10,3,3,2,1,-1
+Algeria,African-Islamic,variant 6,2,2,1,2,10,3,2,1,1,-1
+Algeria,African-Islamic,variant 7,2,2,1,2,10,3,2,1,1,-1
+Algeria,African-Islamic,variant 8,2,2,1,2,10,10,2,1,1,-1
+Algeria,African-Islamic,variant 9,2,2,1,2,10,10,4,1,2,-1
+Andorra,Catholic Europe,variant 0,2,1,1,2,5,10,6,2,2,1
+Andorra,Catholic Europe,variant 1,2,2,1,2,5,10,7,1,2,2
+Andorra,Catholic Europe,variant 2,1,1,1,2,6,10,7,1,2,2
+Andorra,Catholic Europe,variant 3,2,2,1,2,5,10,6,1,2,1
+Andorra,Catholic Europe,variant 4,2,1,1,2,5,10,6,1,2,2
+Andorra,Catholic Europe,variant 5,2,1,1,2,6,10,8,1,2,2
+Andorra,Catholic Europe,variant 6,2,2,1,2,5,10,7,1,2,2
+Andorra,Catholic Europe,variant 7,2,2,1,2,4,10,6,2,2,1
+Andorra,Catholic Europe,variant 8,1,1,2,2,6,10,7,1,2,2
+Andorra,Catholic Europe,variant 9,2,1,2,2,7,10,8,2,2,2
+Argentina,Latin America,variant 0,2,2,1,2,7,10,8,2,2,2
+Argentina,Latin America,variant 1,2,2,1,2,7,10,10,2,2,2
+Argentina,Latin America,variant 2,2,2,1,2,8,10,10,2,2,2
+Argentina,Latin America,variant 3,2,2,1,2,7,10,8,2,2,2
+Argentina,Latin America,variant 4,2,2,1,2,7,10,8,2,1,1
+Argentina,Latin America,variant 5,2,2,2,2,8,10,10,2,2,2
+Argentina,Latin America,variant 6,2,2,1,2,7,10,7,2,2,1
+Argentina,Latin America,variant 7,2,2,1,2,7,10,7,2,1,NA
+Argentina,Latin America,variant 8,2,2,1,2,8,10,10,2,2,NA
+Argentina,Latin America,variant 9,2,2,3,1,7,10,10,2,2,2
+Armenia,Orthodox Europe,variant 0,2,2,1,2,8,3,5,1,1,1
+Armenia,Orthodox Europe,variant 1,2,2,1,2,8,7,6,1,1,2
+Armenia,Orthodox Europe,variant 2,2,2,1,2,8,10,7,1,2,1
+Armenia,Orthodox Europe,variant 3,2,2,1,2,8,1,5,1,1,1
+Armenia,Orthodox Europe,variant 4,2,2,1,2,9,2,3,1,1,1
+Armenia,Orthodox Europe,variant 5,2,2,1,2,8,10,6,1,2,1
+Armenia,Orthodox Europe,variant 6,2,2,1,2,8,7,5,1,1,2
+Armenia,Orthodox Europe,variant 7,2,2,1,2,9,3,5,1,1,2
+Armenia,Orthodox Europe,variant 8,2,2,1,2,8,10,6,1,2,1
+Armenia,Orthodox Europe,variant 9,2,2,1,2,8,10,7,1,2,1
+Australia,English-Speaking,variant 0,2,2,1,2,3,10,8,2,2,2
+Australia,English-Speaking,variant 1,2,2,2,2,3,10,8,2,2,2
+Australia,English-Speaking,variant 2,2,2,2,2,3,10,8,2,2,2
+Australia,English-Speaking,variant 3,2,2,1,2,3,10,8,2,2,2
+Australia,English-Speaking,variant 4,2,2,1,1,3,10,8,2,2,2
+Australia,English-Speaking,variant 5,2,2,2,2,3,10,8,2,2,2
+Australia,English-Speaking,variant 6,2,2,1,2,3,10,8,2,2,2
+Australia,English-Speaking,variant 7,2,2,1,1,3,10,8,2,2,2
+Australia,English-Speaking,variant 8,2,2,2,2,3,10,8,2,2,2
+Australia,English-Speaking,variant 9,2,2,2,2,6,10,10,2,3,2
+Austria,Catholic Europe,variant 0,2,2,3,2,5,10,7,2,2,2
+Austria,Catholic Europe,variant 1,2,2,1,1,4,10,8,2,2,2
+Austria,Catholic Europe,variant 2,2,2,3,2,4,10,8,2,2,2
+Austria,Catholic Europe,variant 3,2,2,1,2,4,10,7,2,2,2
+Austria,Catholic Europe,variant 4,2,1,1,2,4,10,7,2,2,2
+Austria,Catholic Europe,variant 5,2,2,3,2,5,10,8,2,2,2
+Austria,Catholic Europe,variant 6,2,2,1,1,3,10,7,2,2,2
+Austria,Catholic Europe,variant 7,2,2,1,2,4,10,7,2,2,2
+Austria,Catholic Europe,variant 8,2,2,1,2,4,10,8,2,2,2
+Austria,Catholic Europe,variant 9,2,1,3,1,4,10,8,2,2,2
+Azerbaijan,African-Islamic,variant 0,2,2,1,2,8,2,3,1,1,2
+Azerbaijan,African-Islamic,variant 1,2,2,1,2,8,5,5,1,1,1
+Azerbaijan,African-Islamic,variant 2,2,2,1,2,8,10,5,1,1,1
+Azerbaijan,African-Islamic,variant 3,2,2,1,2,9,2,5,1,1,1
+Azerbaijan,African-Islamic,variant 4,2,2,1,2,8,1,4,1,1,1
+Azerbaijan,African-Islamic,variant 5,2,2,2,2,8,10,4,1,1,1
+Azerbaijan,African-Islamic,variant 6,2,2,1,2,8,1,4,1,1,1
+Azerbaijan,African-Islamic,variant 7,2,2,1,2,8,1,5,1,1,1
+Azerbaijan,African-Islamic,variant 8,2,2,1,2,8,10,4,1,1,1
+Azerbaijan,African-Islamic,variant 9,2,2,1,2,8,10,6,1,1,1
+Bangladesh,African-Islamic,variant 0,2,2,1,2,10,2,4,1,1,-1
+Bangladesh,African-Islamic,variant 1,2,2,1,2,10,1,3,1,2,-1
+Bangladesh,African-Islamic,variant 2,2,2,1,2,10,10,6,1,2,-1
+Bangladesh,African-Islamic,variant 3,2,2,1,2,10,1,3,1,1,-1
+Bangladesh,African-Islamic,variant 4,2,2,1,2,10,3,3,1,1,-1
+Bangladesh,African-Islamic,variant 5,2,2,1,2,10,10,4,1,2,1
+Bangladesh,African-Islamic,variant 6,2,2,1,2,10,3,3,1,1,-2
+Bangladesh,African-Islamic,variant 7,2,2,1,2,10,1,4,1,1,-2
+Bangladesh,African-Islamic,variant 8,2,2,1,2,10,10,5,1,2,-1
+Bangladesh,African-Islamic,variant 9,2,2,1,2,10,10,7,1,2,1
+Belgium,Catholic Europe,variant 0,2,2,2,2,3,10,8,2,2,2
+Belgium,Catholic Europe,variant 1,2,2,1,2,3,10,9,2,2,2
+Belgium,Catholic Europe,variant 2,2,2,2,2,4,10,9,2,2,2
+Belgium,Catholic Europe,variant 3,2,2,2,2,3,10,8,2,2,2
+Belgium,Catholic Europe,variant 4,2,2,1,2,2,10,9,2,2,2
+Belgium,Catholic Europe,variant 5,2,2,2,2,4,10,9,2,2,2
+Belgium,Catholic Europe,variant 6,2,2,1,2,4,10,8,2,1,2
+Belgium,Catholic Europe,variant 7,2,2,2,2,3,10,8,2,2,2
+Belgium,Catholic Europe,variant 8,2,2,2,2,4,10,8,2,2,2
+Belgium,Catholic Europe,variant 9,2,2,2,1,4,10,9,2,2,2
