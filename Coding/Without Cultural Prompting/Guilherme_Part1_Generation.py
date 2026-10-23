@@ -78,7 +78,7 @@ RAW_CSV = os.path.join(BASE_DIR, f"Guilherme_General_Raw_{MODEL_SLUG}.csv")
 JSONL = os.path.join(BASE_DIR, f"Guilherme_General_completions_{MODEL_SLUG}.jsonl")
 
 FIELDNAMES = [
-    "run_id", "timestamp", "model", "reasoning_effort",
+    "run_id", "timestamp", "model", "reasoning_effort", "mode",
     "#variant", "country", "scale", "survey_question",
     "raw_answer", "status", "finish_reason",
     "prompt_tokens", "completion_tokens", "reasoning_tokens", "total_tokens",
@@ -131,7 +131,7 @@ def call_with_retry(client, system, question, scale):
     attempt = 0
     while True:
         try:
-            return client.chat.completions.create(
+            kwargs = dict(
                 model=cfg.MODEL,
                 messages=[
                     {"role": "system", "content": system},
@@ -139,8 +139,10 @@ def call_with_retry(client, system, question, scale):
                 ],
                 reasoning_effort=cfg.REASONING_EFFORT,
                 max_completion_tokens=cfg.MAX_COMPLETION_TOKENS,
-                response_format=cfg.response_format_for(scale),
             )
+            if cfg.USE_STRUCTURED_OUTPUTS:
+                kwargs["response_format"] = cfg.response_format_for(scale)
+            return client.chat.completions.create(**kwargs)
         except TRANSIENT_ERRORS as exc:
             attempt += 1
             if attempt > MAX_RETRIES:
@@ -152,7 +154,12 @@ def call_with_retry(client, system, question, scale):
 
 
 def interpret(completion):
-    """Extrai (raw_answer_json, status, finish_reason, tokens) de uma completion."""
+    """Extrai (raw_answer, status, finish_reason, tokens).
+
+    - Structured ON : raw_answer é o JSON estruturado; valida o parse aqui.
+    - Structured OFF: raw_answer é o TEXTO LIVRE cru; parsing/flagging fica
+      para a Etapa B (a 'não resposta' é preservada aqui).
+    """
     ch = completion.choices[0]
     msg = ch.message
     finish = ch.finish_reason
@@ -170,18 +177,28 @@ def interpret(completion):
         "total_tokens": usage.total_tokens if usage else None,
     }
 
+    content = msg.content or ""
+
+    if not cfg.USE_STRUCTURED_OUTPUTS:
+        if getattr(msg, "refusal", None):
+            return msg.refusal, "refusal", finish, tokens
+        text = content.strip()
+        if not text:
+            return "", "empty", finish, tokens
+        return text, "ok", finish, tokens
+
+    # Structured Outputs
     if getattr(msg, "refusal", None):
         return json.dumps({"refusal": msg.refusal}), "refusal", finish, tokens
     if finish == "length":
         return "", "truncated", finish, tokens
-    content = (msg.content or "").strip()
-    if not content:
+    text = content.strip()
+    if not text:
         return "", "empty", finish, tokens
     try:
-        parsed = json.loads(content)
+        parsed = json.loads(text)
     except json.JSONDecodeError:
-        # Com Structured Outputs isto não deveria ocorrer; guardamos o cru p/ auditar.
-        return content, "unparseable", finish, tokens
+        return text, "unparseable", finish, tokens
     return json.dumps(parsed, ensure_ascii=False), "ok", finish, tokens
 
 
@@ -254,6 +271,7 @@ def main():
                     "timestamp": datetime.now(timezone.utc).isoformat(),
                     "model": completion.model,
                     "reasoning_effort": cfg.REASONING_EFFORT,
+                    "mode": "structured" if cfg.USE_STRUCTURED_OUTPUTS else "free_text",
                     "#variant": variant,
                     "country": country,
                     "scale": scale,

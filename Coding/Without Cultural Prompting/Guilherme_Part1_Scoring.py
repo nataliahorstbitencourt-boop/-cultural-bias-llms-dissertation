@@ -25,6 +25,7 @@ Saídas:
   Guilherme_WideTable_Part1_scores_<model>.csv     (pivot para análise em R)
 """
 
+import csv
 import json
 import os
 import re
@@ -43,6 +44,8 @@ MODEL_SLUG = re.sub(r"[^A-Za-z0-9._-]", "-", cfg.MODEL)
 RAW_CSV = os.path.join(BASE_DIR, f"Guilherme_General_Raw_{MODEL_SLUG}.csv")
 SCORES_CSV = os.path.join(BASE_DIR, f"Guilherme_General_Scores_{MODEL_SLUG}.csv")
 WIDE_CSV = os.path.join(BASE_DIR, f"Guilherme_WideTable_Part1_scores_{MODEL_SLUG}.csv")
+# Respostas originais que não puderam ser pontuadas (auditoria; viram NA no analítico).
+FLAGGED_CSV = os.path.join(BASE_DIR, f"Guilherme_General_Flagged_{MODEL_SLUG}.csv")
 
 
 class ScoringError(Exception):
@@ -84,40 +87,88 @@ def score_cell(scale, answer):
     raise ScoringError(f"scale desconhecida: {scale}")
 
 
+def resolve_answer(row):
+    """Devolve (answer_dict, reason). reason=None em sucesso.
+
+    - Linha já marcada na geração (status != ok) -> falha com o próprio status.
+    - Modo structured -> json.loads do raw_answer.
+    - Modo free_text  -> parser best-effort do Config (cfg.parse_free_text).
+    """
+    status = row.get("status")
+    if status != "ok":
+        return None, status or "no_status"
+
+    raw = row["raw_answer"]
+    mode = row.get("mode") or (
+        "structured" if cfg.USE_STRUCTURED_OUTPUTS else "free_text")
+
+    if mode == "structured":
+        try:
+            return json.loads(raw), None
+        except (TypeError, json.JSONDecodeError):
+            return None, "unparseable_json"
+    return cfg.parse_free_text(row["scale"], raw)
+
+
 def main():
     if not os.path.exists(RAW_CSV):
         sys.exit(f"Não encontrei {RAW_CSV}. Rode a Etapa A (geração) primeiro.")
 
     df = pd.read_csv(RAW_CSV)
 
+    # Dedup: a mesma (country, #variant, scale) pode ter uma linha não-ok e,
+    # após um re-run, uma linha ok. Mantém a melhor (prioriza 'ok'); evita o pivot
+    # quebrar com "duplicate entries".
+    before = len(df)
+    df["_ok"] = (df["status"] == "ok").astype(int)
+    df = (df.sort_values(["country", "#variant", "scale", "_ok"], kind="stable")
+            .drop_duplicates(["country", "#variant", "scale"], keep="last")
+            .drop(columns="_ok")
+            .reset_index(drop=True))
+    if len(df) < before:
+        print(f"Deduplicado: {before - len(df)} linha(s) redundante(s) removida(s).")
+
     scores = []
-    problems = 0
+    flagged = []
     for _, row in df.iterrows():
-        if row.get("status") != "ok":
-            scores.append(pd.NA)
-            problems += 1
-            print(f"  AVISO: {row['#variant']} / {row['scale']} "
-                  f"status={row.get('status')} -> score vazio", file=sys.stderr)
-            continue
-        try:
-            answer = json.loads(row["raw_answer"])
-            scores.append(score_cell(row["scale"], answer))
-        except (ScoringError, KeyError, ValueError, json.JSONDecodeError) as exc:
-            scores.append(pd.NA)
-            problems += 1
-            print(f"  AVISO: {row['#variant']} / {row['scale']} "
-                  f"não pôde ser scorada: {exc}", file=sys.stderr)
+        answer, reason = resolve_answer(row)
+        if answer is not None:
+            try:
+                scores.append(score_cell(row["scale"], answer))
+                continue
+            except (ScoringError, KeyError, ValueError, TypeError) as exc:
+                reason = str(exc)
+        scores.append(pd.NA)
+        flagged.append({
+            "country": row.get("country"),
+            "#variant": row.get("#variant"),
+            "scale": row.get("scale"),
+            "status": row.get("status"),
+            "mode": row.get("mode"),
+            "reason": reason,
+            "raw_answer": row.get("raw_answer"),
+        })
+        print(f"  FLAG: {row.get('#variant')} / {row.get('scale')} "
+              f"-> NA ({reason})", file=sys.stderr)
 
     df["score"] = scores
-    df.to_csv(SCORES_CSV, index=False)
+    df.to_csv(SCORES_CSV, index=False, na_rep="NA")
 
     wide = df.pivot(index=["country", "#variant"], columns="scale", values="score")
     wide = wide.reset_index()
-    wide.to_csv(WIDE_CSV, index=False)
+    wide.to_csv(WIDE_CSV, index=False, na_rep="NA")
 
-    print(f"\nScoring concluído ({problems} célula(s) sem score).")
-    print(f"  Long : {SCORES_CSV}")
-    print(f"  Wide : {WIDE_CSV}")
+    flag_fields = ["country", "#variant", "scale", "status", "mode",
+                   "reason", "raw_answer"]
+    with open(FLAGGED_CSV, "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=flag_fields)
+        w.writeheader()
+        w.writerows(flagged)
+
+    print(f"\nScoring concluído ({len(flagged)} célula(s) marcada(s) como NA).")
+    print(f"  Long    : {SCORES_CSV}")
+    print(f"  Wide    : {WIDE_CSV}")
+    print(f"  Flagged : {FLAGGED_CSV}")
 
 
 if __name__ == "__main__":
