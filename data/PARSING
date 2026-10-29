@@ -1,0 +1,34 @@
+Parsing: o que mudou e qual é mais robusto
+O que mudou, escala por escala
+Escalas numéricas (f063, f120, f118, g006, a008, e018)
+Original: nenhum parsing. O texto bruto ia para score e era conferido à mão.
+Novo: re.findall(r"-?\d+") pega o primeiro inteiro dentro da faixa válida. Sem número válido → NA.
+Efeito: “I’d say 7 on a scale of 1 to 10” vira 1, não 7.
+y003 (autonomia)
+Original: "Religious faith" in texto, e assim para as outras três. Diferencia maiúsculas de minúsculas, e “Determination, perseverance” precisa estar com a frase inteira. Sem nenhuma qualidade → 0. Não há limite de escolhas.
+Novo: substring em minúsculas, com aliases (“determination” ou “perseverance”). Mais de 5 qualidades ou nenhuma reconhecida → NA.
+Efeito: “independence” em minúscula agora conta (antes não contava), e a não resposta deixa de virar 0.
+y002 (pós-materialismo)
+Original: split(",") + int(). “3.” ou “1 and 3” quebram o script com erro. Pares repetidos ou diferentes de (1,3)/(2,4) caem no else → 2.
+Novo: pega todos os dígitos de 1 a 4, remove repetidos e usa os dois primeiros. Menos de 2 distintos → NA. Objetivos iguais → NA (checado no score).
+Efeito: não quebra mais, mas “Top 2 goals: 1 and 3” vira o par (2,1), porque o “2” aparece primeiro.
+e025 (petição)
+Original: "A" in texto → 1, senão "B" in → 2, senão "C" in → 3. Qualquer “A” maiúsculo em qualquer lugar vira 1, o que é um bug. Sem match, fica o texto bruto.
+Novo: ordem em três passos: (1) “option X”; (2) frases (“would never” → C, “might” → B, “have signed” → A); (3) letra isolada maiúscula, se houver só uma distinta. Senão → NA.
+Efeito: corrige o bug, mas “might” e o artigo “A” ainda podem errar.
+a165 (confiança)
+Original: == 'A' → 1, == 'B' → 2, ou a frase “Most people can be trusted” → 1. “A)”, “A.” e “B: need to be careful” ficam como texto bruto.
+Novo: mesma lógica do e025, com frases próprias. “A)” e “A.” passam a ser reconhecidos.
+Efeito: aceita bem mais formatos. O risco é o artigo “A” no início de frase virar a letra A.
+Qual é mais robusto?
+O novo é mais robusto em tratamento de formato e de falha:
+não quebra (y002);
+não inventa valores (0, 2, texto bruto);
+corrige o bug do e025;
+é tolerante a maiúsculas e minúsculas e a pontuação;
+registra tudo que falha no Flagged.csv.
+Mas o original falha de forma visível, e o novo pode falhar de forma silenciosa. Texto bruto na coluna score ou um erro de execução chamam atenção. Um “1” extraído do lugar errado entra na média sem ninguém notar. Os três casos de risco do novo são:
+numéricas: primeiro número da frase;
+y002: primeiro dígito da frase;
+e025/a165: “might” e o artigo “A”.
+Conclusão: o novo é mais robusto, mas ainda não é seguro completamente para rodar nos 107 países sem duas correções: priorizar o número ou dígito no início da resposta (e sinalizar quando houver mais de um valor distinto), e testar a letra no início da resposta antes das frases. Com reasoning_effort="low", as respostas provavelmente vêm curtas, o que ameniza o problema, mas só uma amostra de respostas reais confirma isso.
