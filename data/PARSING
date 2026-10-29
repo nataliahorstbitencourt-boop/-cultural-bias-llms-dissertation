@@ -27,8 +27,7 @@ não inventa valores (0, 2, texto bruto);
 corrige o bug do e025;
 é tolerante a maiúsculas e minúsculas e a pontuação;
 registra tudo que falha no Flagged.csv.
-Mas o original falha de forma visível, e o novo pode falhar de forma silenciosa. Texto bruto na coluna score ou um erro de execução chamam atenção. Um “1” extraído do lugar errado entra na média sem ninguém notar. Os três casos de risco do novo são:
+Texto bruto na coluna score ou um erro de execução chamam atenção. Um “1” extraído do lugar errado entra na média sem ninguém notar. Os três casos de risco do novo são:
 numéricas: primeiro número da frase;
 y002: primeiro dígito da frase;
 e025/a165: “might” e o artigo “A”.
-Conclusão: o novo é mais robusto, mas ainda não é seguro completamente para rodar nos 107 países sem duas correções: priorizar o número ou dígito no início da resposta (e sinalizar quando houver mais de um valor distinto), e testar a letra no início da resposta antes das frases. Com reasoning_effort="low", as respostas provavelmente vêm curtas, o que ameniza o problema, mas só uma amostra de respostas reais confirma isso.
