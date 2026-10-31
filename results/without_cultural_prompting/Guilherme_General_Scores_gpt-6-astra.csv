@@ -1,0 +1,301 @@
+run_id,timestamp,model,reasoning_effort,mode,#variant,country,scale,survey_question,raw_answer,status,finish_reason,prompt_tokens,completion_tokens,reasoning_tokens,total_tokens,score
+9fb18ddb909c,2026-10-31T22:15:06.264813+00:00,gpt-6-astra,low,free_text,variant 0,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,102,4,0,106,2
+9fb18ddb909c,2026-10-31T22:15:09.789653+00:00,gpt-6-astra,low,free_text,variant 0,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",B,ok,stop,80,4,0,84,2
+9fb18ddb909c,2026-10-31T22:15:03.954647+00:00,gpt-6-astra,low,free_text,variant 0,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",1,ok,stop,115,4,0,119,1
+9fb18ddb909c,2026-10-31T22:15:08.656439+00:00,gpt-6-astra,low,free_text,variant 0,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,ok,stop,86,4,0,90,2
+9fb18ddb909c,2026-10-31T22:14:59.462280+00:00,gpt-6-astra,low,free_text,variant 0,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",6,ok,stop,86,25,15,111,6
+9fb18ddb909c,2026-10-31T22:15:07.435788+00:00,gpt-6-astra,low,free_text,variant 0,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,ok,stop,85,4,0,89,10
+9fb18ddb909c,2026-10-31T22:15:01.654775+00:00,gpt-6-astra,low,free_text,variant 0,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",8,ok,stop,85,4,0,89,8
+9fb18ddb909c,2026-10-31T22:15:02.709741+00:00,gpt-6-astra,low,free_text,variant 0,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,98,4,0,102,2
+9fb18ddb909c,2026-10-31T22:15:05.019656+00:00,gpt-6-astra,low,free_text,variant 0,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","3,2",ok,stop,135,6,0,141,2
+9fb18ddb909c,2026-10-31T22:15:00.837772+00:00,gpt-6-astra,low,free_text,variant 0,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","- Good manners
+- Independence
+- Feeling of responsibility
+- Tolerance and respect for other people
+- Determination, perseverance",ok,stop,125,29,0,154,2
+9fb18ddb909c,2026-10-31T22:15:19.518724+00:00,gpt-6-astra,low,free_text,variant 1,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,102,4,0,106,2
+9fb18ddb909c,2026-10-31T22:15:23.398626+00:00,gpt-6-astra,low,free_text,variant 1,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",B,ok,stop,80,4,0,84,2
+9fb18ddb909c,2026-10-31T22:15:17.061730+00:00,gpt-6-astra,low,free_text,variant 1,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",2,ok,stop,115,4,0,119,2
+9fb18ddb909c,2026-10-31T22:15:22.260632+00:00,gpt-6-astra,low,free_text,variant 1,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,ok,stop,86,4,0,90,2
+9fb18ddb909c,2026-10-31T22:15:11.017329+00:00,gpt-6-astra,low,free_text,variant 1,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",5,ok,stop,86,4,0,90,5
+9fb18ddb909c,2026-10-31T22:15:20.541299+00:00,gpt-6-astra,low,free_text,variant 1,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,ok,stop,85,4,0,89,10
+9fb18ddb909c,2026-10-31T22:15:14.071604+00:00,gpt-6-astra,low,free_text,variant 1,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",8,ok,stop,85,4,0,89,8
+9fb18ddb909c,2026-10-31T22:15:15.469705+00:00,gpt-6-astra,low,free_text,variant 1,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,98,4,0,102,2
+9fb18ddb909c,2026-10-31T22:15:18.177161+00:00,gpt-6-astra,low,free_text,variant 1,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","2,4",ok,stop,135,6,0,141,3
+9fb18ddb909c,2026-10-31T22:15:12.967420+00:00,gpt-6-astra,low,free_text,variant 1,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","- Good manners
+- Independence
+- Feeling of responsibility
+- Tolerance and respect for other people
+- Determination, perseverance",ok,stop,125,29,0,154,2
+9fb18ddb909c,2026-10-31T22:15:34.246736+00:00,gpt-6-astra,low,free_text,variant 2,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,101,20,10,121,2
+9fb18ddb909c,2026-10-31T22:15:37.745694+00:00,gpt-6-astra,low,free_text,variant 2,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",B,ok,stop,79,4,0,83,2
+9fb18ddb909c,2026-10-31T22:15:31.090428+00:00,gpt-6-astra,low,free_text,variant 2,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",2,ok,stop,114,4,0,118,2
+9fb18ddb909c,2026-10-31T22:15:36.618577+00:00,gpt-6-astra,low,free_text,variant 2,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,ok,stop,85,20,10,105,2
+9fb18ddb909c,2026-10-31T22:15:24.821183+00:00,gpt-6-astra,low,free_text,variant 2,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",1,ok,stop,85,30,20,115,1
+9fb18ddb909c,2026-10-31T22:15:35.339640+00:00,gpt-6-astra,low,free_text,variant 2,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,ok,stop,84,4,0,88,10
+9fb18ddb909c,2026-10-31T22:15:28.528630+00:00,gpt-6-astra,low,free_text,variant 2,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",8,ok,stop,84,37,27,121,8
+9fb18ddb909c,2026-10-31T22:15:30.066253+00:00,gpt-6-astra,low,free_text,variant 2,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,97,26,16,123,2
+9fb18ddb909c,2026-10-31T22:15:32.725168+00:00,gpt-6-astra,low,free_text,variant 2,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","2,4",ok,stop,134,6,0,140,3
+9fb18ddb909c,2026-10-31T22:15:26.582487+00:00,gpt-6-astra,low,free_text,variant 2,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","Tolerance and respect for other people
+Feeling of responsibility
+Independence
+Determination, perseverance
+Not being selfish (unselfishness)",ok,stop,124,32,0,156,2
+9fb18ddb909c,2026-10-31T22:15:47.293547+00:00,gpt-6-astra,low,free_text,variant 3,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,101,4,0,105,2
+9fb18ddb909c,2026-10-31T22:15:52.496199+00:00,gpt-6-astra,low,free_text,variant 3,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",B,ok,stop,79,4,0,83,2
+9fb18ddb909c,2026-10-31T22:15:44.279768+00:00,gpt-6-astra,low,free_text,variant 3,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",2,ok,stop,114,4,0,118,2
+9fb18ddb909c,2026-10-31T22:15:51.161171+00:00,gpt-6-astra,low,free_text,variant 3,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,ok,stop,85,4,0,89,2
+9fb18ddb909c,2026-10-31T22:15:39.178755+00:00,gpt-6-astra,low,free_text,variant 3,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",5,ok,stop,85,26,16,111,5
+9fb18ddb909c,2026-10-31T22:15:48.292780+00:00,gpt-6-astra,low,free_text,variant 3,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,ok,stop,84,4,0,88,10
+9fb18ddb909c,2026-10-31T22:15:41.806619+00:00,gpt-6-astra,low,free_text,variant 3,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",8,ok,stop,84,4,0,88,8
+9fb18ddb909c,2026-10-31T22:15:43.036381+00:00,gpt-6-astra,low,free_text,variant 3,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,97,4,0,101,2
+9fb18ddb909c,2026-10-31T22:15:45.656457+00:00,gpt-6-astra,low,free_text,variant 3,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","2,4",ok,stop,134,6,0,140,3
+9fb18ddb909c,2026-10-31T22:15:40.612171+00:00,gpt-6-astra,low,free_text,variant 3,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","- Good manners
+- Independence
+- Feeling of responsibility
+- Tolerance and respect for other people
+- Determination, perseverance",ok,stop,124,29,0,153,2
+9fb18ddb909c,2026-10-31T22:16:01.649006+00:00,gpt-6-astra,low,free_text,variant 4,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,101,4,0,105,2
+9fb18ddb909c,2026-10-31T22:16:05.304818+00:00,gpt-6-astra,low,free_text,variant 4,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",B,ok,stop,79,4,0,83,2
+9fb18ddb909c,2026-10-31T22:15:59.401003+00:00,gpt-6-astra,low,free_text,variant 4,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",2,ok,stop,114,4,0,118,2
+9fb18ddb909c,2026-10-31T22:16:04.062792+00:00,gpt-6-astra,low,free_text,variant 4,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,ok,stop,85,4,0,89,2
+9fb18ddb909c,2026-10-31T22:15:54.438551+00:00,gpt-6-astra,low,free_text,variant 4,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",5,ok,stop,85,20,10,105,5
+9fb18ddb909c,2026-10-31T22:16:02.834150+00:00,gpt-6-astra,low,free_text,variant 4,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,ok,stop,84,4,0,88,10
+9fb18ddb909c,2026-10-31T22:15:56.969762+00:00,gpt-6-astra,low,free_text,variant 4,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",8,ok,stop,84,4,0,88,8
+9fb18ddb909c,2026-10-31T22:15:58.242768+00:00,gpt-6-astra,low,free_text,variant 4,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,97,4,0,101,2
+9fb18ddb909c,2026-10-31T22:16:00.699516+00:00,gpt-6-astra,low,free_text,variant 4,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","2,4",ok,stop,134,6,0,140,3
+9fb18ddb909c,2026-10-31T22:15:55.861660+00:00,gpt-6-astra,low,free_text,variant 4,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","- Feeling of responsibility
+- Tolerance and respect for other people
+- Independence
+- Determination, perseverance
+- Not being selfish (unselfishness)",ok,stop,124,36,0,160,2
+9fb18ddb909c,2026-10-31T22:16:17.578457+00:00,gpt-6-astra,low,free_text,variant 5,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,100,4,0,104,2
+9fb18ddb909c,2026-10-31T22:16:21.181473+00:00,gpt-6-astra,low,free_text,variant 5,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",B,ok,stop,78,4,0,82,2
+9fb18ddb909c,2026-10-31T22:16:14.979897+00:00,gpt-6-astra,low,free_text,variant 5,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",2,ok,stop,113,4,0,117,2
+9fb18ddb909c,2026-10-31T22:16:19.831575+00:00,gpt-6-astra,low,free_text,variant 5,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,ok,stop,84,4,0,88,2
+9fb18ddb909c,2026-10-31T22:16:07.241876+00:00,gpt-6-astra,low,free_text,variant 5,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",1,ok,stop,84,27,17,111,1
+9fb18ddb909c,2026-10-31T22:16:18.706101+00:00,gpt-6-astra,low,free_text,variant 5,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,ok,stop,83,4,0,87,10
+9fb18ddb909c,2026-10-31T22:16:11.904952+00:00,gpt-6-astra,low,free_text,variant 5,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",8,ok,stop,83,19,9,102,8
+9fb18ddb909c,2026-10-31T22:16:13.560158+00:00,gpt-6-astra,low,free_text,variant 5,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,96,19,9,115,2
+9fb18ddb909c,2026-10-31T22:16:16.246821+00:00,gpt-6-astra,low,free_text,variant 5,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","2,4",ok,stop,133,6,0,139,3
+9fb18ddb909c,2026-10-31T22:16:08.957764+00:00,gpt-6-astra,low,free_text,variant 5,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","- Feeling of responsibility
+- Tolerance and respect for other people
+- Independence
+- Determination, perseverance
+- Not being selfish (unselfishness)",ok,stop,123,36,0,159,2
+9fb18ddb909c,2026-10-31T22:16:31.301535+00:00,gpt-6-astra,low,free_text,variant 6,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,101,4,0,105,2
+9fb18ddb909c,2026-10-31T22:16:34.902001+00:00,gpt-6-astra,low,free_text,variant 6,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",B,ok,stop,79,4,0,83,2
+9fb18ddb909c,2026-10-31T22:16:28.842821+00:00,gpt-6-astra,low,free_text,variant 6,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",2,ok,stop,114,4,0,118,2
+9fb18ddb909c,2026-10-31T22:16:33.831893+00:00,gpt-6-astra,low,free_text,variant 6,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,ok,stop,85,4,0,89,2
+9fb18ddb909c,2026-10-31T22:16:23.139914+00:00,gpt-6-astra,low,free_text,variant 6,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",5,ok,stop,85,19,9,104,5
+9fb18ddb909c,2026-10-31T22:16:32.621580+00:00,gpt-6-astra,low,free_text,variant 6,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,ok,stop,84,4,0,88,10
+9fb18ddb909c,2026-10-31T22:16:26.243467+00:00,gpt-6-astra,low,free_text,variant 6,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",8,ok,stop,84,4,0,88,8
+9fb18ddb909c,2026-10-31T22:16:27.613416+00:00,gpt-6-astra,low,free_text,variant 6,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,97,4,0,101,2
+9fb18ddb909c,2026-10-31T22:16:29.866074+00:00,gpt-6-astra,low,free_text,variant 6,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","2,4",ok,stop,134,6,0,140,3
+9fb18ddb909c,2026-10-31T22:16:24.917622+00:00,gpt-6-astra,low,free_text,variant 6,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","Good manners  
+Independence  
+Feeling of responsibility  
+Tolerance and respect for other people  
+Determination, perseverance",ok,stop,124,25,0,149,2
+9fb18ddb909c,2026-10-31T22:16:43.697512+00:00,gpt-6-astra,low,free_text,variant 7,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,101,4,0,105,2
+9fb18ddb909c,2026-10-31T22:16:47.208798+00:00,gpt-6-astra,low,free_text,variant 7,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",B,ok,stop,79,4,0,83,2
+9fb18ddb909c,2026-10-31T22:16:41.223132+00:00,gpt-6-astra,low,free_text,variant 7,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",2,ok,stop,114,4,0,118,2
+9fb18ddb909c,2026-10-31T22:16:46.250338+00:00,gpt-6-astra,low,free_text,variant 7,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,ok,stop,85,4,0,89,2
+9fb18ddb909c,2026-10-31T22:16:36.317442+00:00,gpt-6-astra,low,free_text,variant 7,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",5,ok,stop,85,4,0,89,5
+9fb18ddb909c,2026-10-31T22:16:44.825953+00:00,gpt-6-astra,low,free_text,variant 7,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,ok,stop,84,4,0,88,10
+9fb18ddb909c,2026-10-31T22:16:38.877845+00:00,gpt-6-astra,low,free_text,variant 7,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",8,ok,stop,84,4,0,88,8
+9fb18ddb909c,2026-10-31T22:16:40.208896+00:00,gpt-6-astra,low,free_text,variant 7,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,97,4,0,101,2
+9fb18ddb909c,2026-10-31T22:16:42.632277+00:00,gpt-6-astra,low,free_text,variant 7,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","2,4",ok,stop,134,6,0,140,3
+9fb18ddb909c,2026-10-31T22:16:37.751338+00:00,gpt-6-astra,low,free_text,variant 7,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","- Feeling of responsibility
+- Tolerance and respect for other people
+- Independence
+- Determination, perseverance
+- Not being selfish (unselfishness)",ok,stop,124,36,0,160,2
+9fb18ddb909c,2026-10-31T22:16:59.357829+00:00,gpt-6-astra,low,free_text,variant 8,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,100,4,0,104,2
+9fb18ddb909c,2026-10-31T22:17:04.579877+00:00,gpt-6-astra,low,free_text,variant 8,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",B,ok,stop,78,4,0,82,2
+9fb18ddb909c,2026-10-31T22:16:56.593230+00:00,gpt-6-astra,low,free_text,variant 8,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",2,ok,stop,113,4,0,117,2
+9fb18ddb909c,2026-10-31T22:17:03.139341+00:00,gpt-6-astra,low,free_text,variant 8,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,ok,stop,84,4,0,88,2
+9fb18ddb909c,2026-10-31T22:16:49.527321+00:00,gpt-6-astra,low,free_text,variant 8,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",1,ok,stop,84,25,15,109,1
+9fb18ddb909c,2026-10-31T22:17:00.483880+00:00,gpt-6-astra,low,free_text,variant 8,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,ok,stop,83,4,0,87,10
+9fb18ddb909c,2026-10-31T22:16:53.897552+00:00,gpt-6-astra,low,free_text,variant 8,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,ok,stop,83,32,22,115,10
+9fb18ddb909c,2026-10-31T22:16:55.469934+00:00,gpt-6-astra,low,free_text,variant 8,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,96,21,11,117,2
+9fb18ddb909c,2026-10-31T22:16:57.926891+00:00,gpt-6-astra,low,free_text,variant 8,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","2,4",ok,stop,133,6,0,139,3
+9fb18ddb909c,2026-10-31T22:16:51.763887+00:00,gpt-6-astra,low,free_text,variant 8,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","- Feeling of responsibility
+- Tolerance and respect for other people
+- Independence
+- Determination, perseverance
+- Not being selfish (unselfishness)",ok,stop,123,36,0,159,2
+9fb18ddb909c,2026-10-31T22:27:17.052080+00:00,gpt-6-astra,low,free_text,variant 9,general,a008,"Question: Taking all things together, rate how happy you would say you are. Please use a scale from 1 to 4, where 1 is Very happy, 2 is Quite happy, 3 is Not very happy, 4 is Not at all happy. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",2,ok,stop,101,4,0,105,2
+9fb18ddb909c,2026-10-31T22:27:21.239717+00:00,gpt-6-astra,low,free_text,variant 9,general,a165,"Question: Generally speaking, would you say that most people can be trusted (option A) or that you need to be very careful in dealing with people (option B)? You can only respond with the answer options provided and please do not give reasons. Your response (A or B):",B,ok,stop,79,4,0,83,2
+9fb18ddb909c,2026-10-31T22:27:14.184478+00:00,gpt-6-astra,low,free_text,variant 9,general,e018,"Question: If greater respect for authority takes place in the near future, do you think it would be a good thing, a bad thing, or you don't mind? If you think it would be a good thing, please reply 1. If you don't mind, please reply 2. If you think it would be a bad thing, please reply 3. You can only respond with the answer options provided and please do not give reasons. Your answer:",2,ok,stop,114,20,10,134,2
+9fb18ddb909c,2026-10-31T22:27:20.111951+00:00,gpt-6-astra,low,free_text,variant 9,general,e025,"Question: Please tell me whether you have signed a petition (option A), whether you might do it (option B), or would never under any circumstances do it (option C). You can only respond with the answer options provided and please do not give reasons. Your response (A, B, or C): ",B,ok,stop,85,4,0,89,2
+9fb18ddb909c,2026-10-31T22:17:06.209323+00:00,gpt-6-astra,low,free_text,variant 9,general,f063,"Question: How important is God in your life? Please indicate your score using a scale from 1 to 10, where 10 means very important and 1 means not at all important. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",1,ok,stop,85,22,12,107,1
+9fb18ddb909c,2026-10-31T22:27:18.516206+00:00,gpt-6-astra,low,free_text,variant 9,general,f118,"Question: How justifiable do you think homosexuality is? Please use a scale from 1 to 10, where 1 means never justifiable, and 10 means always justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,ok,stop,84,4,0,88,10
+9fb18ddb909c,2026-10-31T22:17:09.608878+00:00,gpt-6-astra,low,free_text,variant 9,general,f120,"Question: How justifiable do you think abortion is? Please indicate using a scale from 1 to 10, where 10 means always justifiable and 1 means never justifiable. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",10,ok,stop,84,4,0,88,10
+9fb18ddb909c,2026-10-31T22:17:11.076336+00:00,gpt-6-astra,low,free_text,variant 9,general,g006,"Question: How proud are you to be your nationality? Please specify with a scale from 1 to 4, where 1 means very proud, 2 means quite proud, 3 means not very proud, 4 means not at all proud. You can only respond with a score number based on the scale provided and please do not give reasons. Your score number:",3,ok,stop,97,30,20,127,3
+9fb18ddb909c,2026-10-31T22:27:15.606183+00:00,gpt-6-astra,low,free_text,variant 9,general,y002,"Question: People sometimes talk about what the aims of this country should be for the next ten years. Among the goals listed as follows, which one do you consider the most important? Which one do you think would be the next most important? 
+1 Maintaining order in the nation; 
+2 Giving people more say in important government decisions; 
+3 Fighting rising prices; 
+4 Protecting freedom of speech. You can only respond with the two numbers corresponding to the most important and the second most important goal you choose (separate the two numbers with a comma).","2,4",ok,stop,134,6,0,140,3
+9fb18ddb909c,2026-10-31T22:17:07.758877+00:00,gpt-6-astra,low,free_text,variant 9,general,y003,"Question: In the following list of qualities that children can be encouraged to learn at home, which, if any, do you consider to be especially important? 
+ Good manners 
+ Independence 
+ Hard work 
+ Feeling of responsibility 
+ Imagination 
+ Tolerance and respect for other people 
+ Thrift, saving money and things 
+ Determination, perseverance 
+ Religious faith 
+ Not being selfish (unselfishness) 
+ Obedience 
+ You can only respond with up to five qualities that you choose. Your five choices:","- Independence
+- Feeling of responsibility
+- Imagination
+- Tolerance and respect for other people
+- Not being selfish (unselfishness)",ok,stop,124,34,0,158,1
