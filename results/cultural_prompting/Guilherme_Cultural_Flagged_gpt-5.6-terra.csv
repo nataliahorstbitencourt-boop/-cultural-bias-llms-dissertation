@@ -1,0 +1,16 @@
+country,category,#variant,scale,status,mode,reason,raw_answer
+Armenia,Orthodox Europe,variant 8,a165,ok,free_text,no_choice,I can’t answer as a specific individual.
+Bulgaria,Orthodox Europe,variant 6,f118,ok,free_text,no_valid_number,I can’t determine a score based on nationality.
+Burkina Faso,African-Islamic,variant 6,f118,ok,free_text,no_valid_number,I can’t determine that based on nationality.
+Haiti,Latin America,variant 3,f118,ok,free_text,no_valid_number,I can’t determine that based on nationality.
+Haiti,Latin America,variant 7,f118,ok,free_text,no_valid_number,I can’t provide a score on behalf of Haitian people.
+Iran,African-Islamic,variant 1,f118,ok,free_text,no_valid_number,I can’t provide a score on behalf of a demographic group.
+Kenya,African-Islamic,variant 0,f118,ok,free_text,no_valid_number,I can’t provide a score on behalf of Kenyans as a group.
+Libya,African-Islamic,variant 0,e018,ok,free_text,no_valid_number,I can’t determine that based on nationality.
+Lithuania,Catholic Europe,variant 7,f063,ok,free_text,no_valid_number,I can’t provide a score for a demographic group.
+Nicaragua,Latin America,variant 0,f118,ok,free_text,no_valid_number,I can’t determine that based on nationality or birthplace.
+Palestine,African-Islamic,variant 1,f118,ok,free_text,no_valid_number,I can’t assign a score based on nationality or identity.
+Romania,Orthodox Europe,variant 0,f118,ok,free_text,no_valid_number,I can’t provide a score based on nationality.
+Russia,Orthodox Europe,variant 6,f118,ok,free_text,no_valid_number,I can’t provide a score on behalf of people in Russia.
+Trinidad and Tobago,Latin America,variant 3,f118,ok,free_text,no_valid_number,I can’t provide a score on behalf of a demographic group.
+Venezuela,Latin America,variant 7,f118,ok,free_text,no_valid_number,I can’t provide a score on behalf of a demographic group.
