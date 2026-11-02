@@ -336,6 +336,327 @@ write.csv(l2_results, "RQ1_General_Responses_L2_Results.csv", row.names = FALSE)
 
 
 
+#####Part 2: Propose Cultural Prompting as a control strategy#####
+
+# <<< NOVO: pasta onde estão os CSVs
+caminho_cp = "/Users/nataliahorst/Desktop/Projetos R/Resultados ORIGINAL e NOVO/Analysis_Part2_Localized_Cultural_Values-archive/"
+
+pca_result_country_level_selected = subset(pca_result_country_level, select = c(RC1_final, RC2_final, country.territory))
+
+###GPT-4o##
+# <<< ALTERADO: file.choose() removido; caminho ajustado
+CP_gpt_4o = read.csv(paste0(caminho_cp, "WideTable_Part2_all_district_scores_gpt-4o-2024-05-13.csv"))
+summary(CP_gpt_4o)
+colnames(CP_gpt_4o)[colnames(CP_gpt_4o) == "country"] ="country.territory"
+
+CP_coordinate_gpt_4o = predict.psych(analysis, CP_gpt_4o[,3:12], joint_data_for_fa[,5:14])
+CP_coordinate_gpt_4o = as.data.frame(CP_coordinate_gpt_4o)
+
+CP_coordinate_gpt_4o$RC1 = 1.81 * CP_coordinate_gpt_4o$RC1 + 0.38
+CP_coordinate_gpt_4o$RC2 = 1.61 * CP_coordinate_gpt_4o$RC2 - 0.01
+
+CP_coordinate_gpt_4o$country.territory = CP_gpt_4o$country.territory
+
+CP_coordinate_gpt_4o = CP_coordinate_gpt_4o %>%
+  group_by(country.territory) %>%
+  summarise(
+    RC1_cp_gpt_4o = mean(RC1), 
+    RC2_cp_gpt_4o = mean(RC2)
+  )
+
+CP_coordinate_gpt_4o$country.territory <- gsub("_", " ", CP_coordinate_gpt_4o$country.territory)
+
+gpt4o_l2_a_data = left_join(pca_result_country_level_selected, CP_coordinate_gpt_4o, by = c('country.territory' = 'country.territory'))
+colnames(gpt4o_l2_a_data)[colnames(gpt4o_l2_a_data) == "RC1_final"] ="RC1_human_survey"
+colnames(gpt4o_l2_a_data)[colnames(gpt4o_l2_a_data) == "RC2_final"] ="RC2_human_survey"
+gpt4o_l2_a_data$RC1_diff = gpt4o_l2_a_data$RC1_cp_gpt_4o - gpt4o_l2_a_data$RC1_human_survey
+gpt4o_l2_a_data$RC2_diff = gpt4o_l2_a_data$RC2_cp_gpt_4o - gpt4o_l2_a_data$RC2_human_survey
+gpt4o_l2_a_data <- gpt4o_l2_a_data %>%
+  select(country.territory, everything())
+write.csv(gpt4o_l2_a_data, "coordinates_on_map_gpt-4o-2024-05-13.csv", row.names = FALSE)
+
+gpt4o_l2_a_data$l2_a_gpt4o = sqrt((gpt4o_l2_a_data$RC1_human_survey - gpt4o_l2_a_data$RC1_cp_gpt_4o)^2 + (gpt4o_l2_a_data$RC2_human_survey - gpt4o_l2_a_data$RC2_cp_gpt_4o)^2)
+gpt4o_l2_a_data_select = subset(gpt4o_l2_a_data, select = c(country.territory, l2_a_gpt4o))
+
+
+###GPT-4-turbo##
+# <<< ALTERADO
+CP_gpt_4turbo = read.csv(paste0(caminho_cp, "WideTable_Part2_all_district_scores_gpt-4-turbo-2024-04-09.csv"))
+summary(CP_gpt_4turbo)
+colnames(CP_gpt_4turbo)[colnames(CP_gpt_4turbo) == "country"] ="country.territory"
+
+CP_coordinate_gpt_4turbo = predict.psych(analysis, CP_gpt_4turbo[,3:12], joint_data_for_fa[,5:14])
+CP_coordinate_gpt_4turbo = as.data.frame(CP_coordinate_gpt_4turbo)
+
+CP_coordinate_gpt_4turbo$RC1 = 1.81 * CP_coordinate_gpt_4turbo$RC1 + 0.38
+CP_coordinate_gpt_4turbo$RC2 = 1.61 * CP_coordinate_gpt_4turbo$RC2 - 0.01
+
+CP_coordinate_gpt_4turbo$country.territory = CP_gpt_4turbo$country.territory
+
+CP_coordinate_gpt_4turbo = CP_coordinate_gpt_4turbo %>%
+  group_by(country.territory) %>%
+  summarise(
+    RC1_cp_gpt_4turbo = mean(RC1),
+    RC2_cp_gpt_4turbo = mean(RC2)
+  )
+
+CP_coordinate_gpt_4turbo$country.territory <- gsub("_", " ", CP_coordinate_gpt_4turbo$country.territory)
+
+gpt4turbo_l2_a_data = left_join(pca_result_country_level_selected, CP_coordinate_gpt_4turbo, by = c('country.territory' = 'country.territory'))
+colnames(gpt4turbo_l2_a_data)[colnames(gpt4turbo_l2_a_data) == "RC1_final"] ="RC1_human_survey"
+colnames(gpt4turbo_l2_a_data)[colnames(gpt4turbo_l2_a_data) == "RC2_final"] ="RC2_human_survey"
+gpt4turbo_l2_a_data$RC1_diff = gpt4turbo_l2_a_data$RC1_cp_gpt_4turbo - gpt4turbo_l2_a_data$RC1_human_survey
+gpt4turbo_l2_a_data$RC2_diff = gpt4turbo_l2_a_data$RC2_cp_gpt_4turbo - gpt4turbo_l2_a_data$RC2_human_survey
+gpt4turbo_l2_a_data <- gpt4turbo_l2_a_data %>%
+  select(country.territory, everything())
+write.csv(gpt4turbo_l2_a_data, "coordinates_on_map_gpt-4-turbo-2024-04-09.csv", row.names = FALSE)
+
+gpt4turbo_l2_a_data$l2_a_gpt4turbo = sqrt((gpt4turbo_l2_a_data$RC1_human_survey - gpt4turbo_l2_a_data$RC1_cp_gpt_4turbo)^2 + (gpt4turbo_l2_a_data$RC2_human_survey - gpt4turbo_l2_a_data$RC2_cp_gpt_4turbo)^2)
+gpt4turbo_l2_a_data_select = subset(gpt4turbo_l2_a_data, select = c(country.territory, l2_a_gpt4turbo))
+
+
+###GPT-4##
+# <<< ALTERADO
+CP_gpt_4 = read.csv(paste0(caminho_cp, "WideTable_Part2_all_district_scores_gpt-4-0613.csv"))
+summary(CP_gpt_4)
+colnames(CP_gpt_4)[colnames(CP_gpt_4) == "country"] ="country.territory"
+
+CP_coordinate_gpt_4 = predict.psych(analysis, CP_gpt_4[,3:12], joint_data_for_fa[,5:14])
+CP_coordinate_gpt_4 = as.data.frame(CP_coordinate_gpt_4)
+
+CP_coordinate_gpt_4$RC1 = 1.81 * CP_coordinate_gpt_4$RC1 + 0.38
+CP_coordinate_gpt_4$RC2 = 1.61 * CP_coordinate_gpt_4$RC2 - 0.01
+
+CP_coordinate_gpt_4$country.territory = CP_gpt_4$country.territory
+
+CP_coordinate_gpt_4 = CP_coordinate_gpt_4 %>%
+  group_by(country.territory) %>%
+  summarise(
+    RC1_cp_gpt_4 = mean(RC1),
+    RC2_cp_gpt_4 = mean(RC2)
+  )
+
+CP_coordinate_gpt_4$country.territory <- gsub("_", " ", CP_coordinate_gpt_4$country.territory)
+
+gpt4_l2_a_data = left_join(pca_result_country_level_selected, CP_coordinate_gpt_4, by = c('country.territory' = 'country.territory'))
+colnames(gpt4_l2_a_data)[colnames(gpt4_l2_a_data) == "RC1_final"] ="RC1_human_survey"
+colnames(gpt4_l2_a_data)[colnames(gpt4_l2_a_data) == "RC2_final"] ="RC2_human_survey"
+gpt4_l2_a_data$RC1_diff = gpt4_l2_a_data$RC1_cp_gpt_4 - gpt4_l2_a_data$RC1_human_survey
+gpt4_l2_a_data$RC2_diff = gpt4_l2_a_data$RC2_cp_gpt_4 - gpt4_l2_a_data$RC2_human_survey
+gpt4_l2_a_data <- gpt4_l2_a_data %>%
+  select(country.territory, everything())
+write.csv(gpt4_l2_a_data, "coordinates_on_map_gpt-4-0613.csv", row.names = FALSE)
+
+gpt4_l2_a_data$l2_a_gpt4 = sqrt((gpt4_l2_a_data$RC1_human_survey - gpt4_l2_a_data$RC1_cp_gpt_4)^2 + (gpt4_l2_a_data$RC2_human_survey - gpt4_l2_a_data$RC2_cp_gpt_4)^2)
+gpt4_l2_a_data_select = subset(gpt4_l2_a_data, select = c(country.territory, l2_a_gpt4))
+
+
+###GPT-3.5-turbo##
+# <<< ALTERADO
+CP_gpt_3.5turbo = read.csv(paste0(caminho_cp, "WideTable_Part2_all_district_scores_gpt-3.5-turbo-0613.csv"))
+summary(CP_gpt_3.5turbo) #f120 has 2 null values, f118 has 30 null values
+check = CP_gpt_3.5turbo %>%
+  filter(is.na(f120))#Libya with variant 1 and variant 2
+check = CP_gpt_3.5turbo %>%
+  filter(is.na(f118)) #Algeria (#2), Azerbaijan (#2), Iran (#1,2,5,8,9), Iraq (#2,5), Jordan (#2), Libya (all variants), Maldives (#2,5), Palestine (#2,5,9), Rwanda (#2), Tunisia (#2), Yemen (#0, #2), Zambia (#2) 
+
+CP_gpt_3.5turbo <- na.omit(CP_gpt_3.5turbo)
+
+colnames(CP_gpt_3.5turbo)[colnames(CP_gpt_3.5turbo) == "country"] ="country.territory"
+
+CP_coordinate_gpt_3.5turbo = predict.psych(analysis, CP_gpt_3.5turbo[,3:12], joint_data_for_fa[,5:14])
+CP_coordinate_gpt_3.5turbo = as.data.frame(CP_coordinate_gpt_3.5turbo)
+
+CP_coordinate_gpt_3.5turbo$RC1 = 1.81 * CP_coordinate_gpt_3.5turbo$RC1 + 0.38
+CP_coordinate_gpt_3.5turbo$RC2 = 1.61 * CP_coordinate_gpt_3.5turbo$RC2 - 0.01
+
+CP_coordinate_gpt_3.5turbo$country.territory = CP_gpt_3.5turbo$country.territory
+
+CP_coordinate_gpt_3.5turbo = CP_coordinate_gpt_3.5turbo %>%
+  group_by(country.territory) %>%
+  summarise(
+    RC1_cp_gpt_3.5turbo = mean(RC1),
+    RC2_cp_gpt_3.5turbo = mean(RC2)
+  )
+
+CP_coordinate_gpt_3.5turbo$country.territory <- gsub("_", " ", CP_coordinate_gpt_3.5turbo$country.territory)
+
+gpt3.5turbo_l2_a_data = left_join(pca_result_country_level_selected, CP_coordinate_gpt_3.5turbo, by = c('country.territory' = 'country.territory'))
+colnames(gpt3.5turbo_l2_a_data)[colnames(gpt3.5turbo_l2_a_data) == "RC1_final"] ="RC1_human_survey"
+colnames(gpt3.5turbo_l2_a_data)[colnames(gpt3.5turbo_l2_a_data) == "RC2_final"] ="RC2_human_survey"
+gpt3.5turbo_l2_a_data$RC1_diff = gpt3.5turbo_l2_a_data$RC1_cp_gpt_3.5turbo - gpt3.5turbo_l2_a_data$RC1_human_survey
+gpt3.5turbo_l2_a_data$RC2_diff = gpt3.5turbo_l2_a_data$RC2_cp_gpt_3.5turbo - gpt3.5turbo_l2_a_data$RC2_human_survey
+gpt3.5turbo_l2_a_data <- gpt3.5turbo_l2_a_data %>%
+  select(country.territory, everything())
+write.csv(gpt3.5turbo_l2_a_data, "coordinates_on_map_gpt-3.5-turbo-0613.csv", row.names = FALSE)
+
+gpt3.5turbo_l2_a_data$l2_a_gpt3.5turbo = sqrt((gpt3.5turbo_l2_a_data$RC1_human_survey - gpt3.5turbo_l2_a_data$RC1_cp_gpt_3.5turbo)^2 + (gpt3.5turbo_l2_a_data$RC2_human_survey - gpt3.5turbo_l2_a_data$RC2_cp_gpt_3.5turbo)^2)
+gpt3.5turbo_l2_a_data_select = subset(gpt3.5turbo_l2_a_data, select = c(country.territory, l2_a_gpt3.5turbo))
+
+
+###GPT-3###
+# <<< ALTERADO (ajuste o nome do arquivo se estiver em outra pasta)
+CP_gpt_3 = read.csv(paste0(caminho_cp, "GPT3_prompted_scores.csv"))
+
+CP_coordinate_gpt_3 = predict.psych(analysis, CP_gpt_3[,2:11], joint_data_for_fa[,5:14])
+CP_coordinate_gpt_3 = as.data.frame(CP_coordinate_gpt_3)
+
+CP_coordinate_gpt_3$RC1 = 1.81 * CP_coordinate_gpt_3$RC1 + 0.38
+CP_coordinate_gpt_3$RC2 = 1.61 * CP_coordinate_gpt_3$RC2 - 0.01
+
+CP_coordinate_gpt_3$country.territory = CP_gpt_3$country.territory
+
+gpt3_l2_a_data = left_join(pca_result_country_level_selected, CP_coordinate_gpt_3, by = c('country.territory' = 'country.territory'))
+colnames(gpt3_l2_a_data)[colnames(gpt3_l2_a_data) == "RC1_final"] ="RC1_human_survey"
+colnames(gpt3_l2_a_data)[colnames(gpt3_l2_a_data) == "RC2_final"] ="RC2_human_survey"
+colnames(gpt3_l2_a_data)[colnames(gpt3_l2_a_data) == "RC1"] ="RC1_cp_gpt_3"
+colnames(gpt3_l2_a_data)[colnames(gpt3_l2_a_data) == "RC2"] ="RC2_cp_gpt_3"
+gpt3_l2_a_data$RC1_diff = gpt3_l2_a_data$RC1_cp_gpt_3 - gpt3_l2_a_data$RC1_human_survey
+gpt3_l2_a_data$RC2_diff = gpt3_l2_a_data$RC2_cp_gpt_3 - gpt3_l2_a_data$RC2_human_survey
+gpt3_l2_a_data <- gpt3_l2_a_data %>%
+  select(country.territory, everything())
+write.csv(gpt3_l2_a_data, "coordinates_on_map_gpt-3.csv", row.names = FALSE)
+
+gpt3_l2_a_data$l2_a_gpt3 = sqrt((gpt3_l2_a_data$RC1_human_survey - gpt3_l2_a_data$RC1_cp_gpt_3)^2 + (gpt3_l2_a_data$RC2_human_survey - gpt3_l2_a_data$RC2_cp_gpt_3)^2)
+gpt3_l2_a_data_select = subset(gpt3_l2_a_data, select = c(country.territory, l2_a_gpt3))
+
+
+###GPT-5.6-terra##  # <<< NOVO (mesmo tratamento de NA do GPT-3.5-turbo)
+CP_gpt_5.6terra = read.csv(paste0(caminho_cp, "WideTable_Part2_all_countries_scores_gpt-5.6-terra.csv"))
+summary(CP_gpt_5.6terra) #a165 has 1 null, e018 has 1 null, f063 has 1 null, f118 has 12 null values
+check = CP_gpt_5.6terra[!complete.cases(CP_gpt_5.6terra), c("country", "X.variant")] #países/variantes com NA
+
+CP_gpt_5.6terra <- na.omit(CP_gpt_5.6terra)
+
+colnames(CP_gpt_5.6terra)[colnames(CP_gpt_5.6terra) == "country"] ="country.territory"
+
+# <<< ALTERADO: variáveis nas colunas 4:13 (este arquivo tem 3 colunas de identificação: country, category, X.variant)
+CP_coordinate_gpt_5.6terra = predict.psych(analysis, CP_gpt_5.6terra[,4:13], joint_data_for_fa[,5:14])
+CP_coordinate_gpt_5.6terra = as.data.frame(CP_coordinate_gpt_5.6terra)
+
+CP_coordinate_gpt_5.6terra$RC1 = 1.81 * CP_coordinate_gpt_5.6terra$RC1 + 0.38
+CP_coordinate_gpt_5.6terra$RC2 = 1.61 * CP_coordinate_gpt_5.6terra$RC2 - 0.01
+
+CP_coordinate_gpt_5.6terra$country.territory = CP_gpt_5.6terra$country.territory
+
+CP_coordinate_gpt_5.6terra = CP_coordinate_gpt_5.6terra %>%
+  group_by(country.territory) %>%
+  summarise(
+    RC1_cp_gpt_5.6terra = mean(RC1),
+    RC2_cp_gpt_5.6terra = mean(RC2)
+  )
+
+CP_coordinate_gpt_5.6terra$country.territory <- gsub("_", " ", CP_coordinate_gpt_5.6terra$country.territory)
+
+gpt5.6terra_l2_a_data = left_join(pca_result_country_level_selected, CP_coordinate_gpt_5.6terra, by = c('country.territory' = 'country.territory'))
+colnames(gpt5.6terra_l2_a_data)[colnames(gpt5.6terra_l2_a_data) == "RC1_final"] ="RC1_human_survey"
+colnames(gpt5.6terra_l2_a_data)[colnames(gpt5.6terra_l2_a_data) == "RC2_final"] ="RC2_human_survey"
+gpt5.6terra_l2_a_data$RC1_diff = gpt5.6terra_l2_a_data$RC1_cp_gpt_5.6terra - gpt5.6terra_l2_a_data$RC1_human_survey
+gpt5.6terra_l2_a_data$RC2_diff = gpt5.6terra_l2_a_data$RC2_cp_gpt_5.6terra - gpt5.6terra_l2_a_data$RC2_human_survey
+gpt5.6terra_l2_a_data <- gpt5.6terra_l2_a_data %>%
+  select(country.territory, everything())
+write.csv(gpt5.6terra_l2_a_data, "coordinates_on_map_gpt-5.6-terra.csv", row.names = FALSE)
+
+gpt5.6terra_l2_a_data$l2_a_gpt5.6terra = sqrt((gpt5.6terra_l2_a_data$RC1_human_survey - gpt5.6terra_l2_a_data$RC1_cp_gpt_5.6terra)^2 + (gpt5.6terra_l2_a_data$RC2_human_survey - gpt5.6terra_l2_a_data$RC2_cp_gpt_5.6terra)^2)
+gpt5.6terra_l2_a_data_select = subset(gpt5.6terra_l2_a_data, select = c(country.territory, l2_a_gpt5.6terra))
+
+
+###GPT-6-astra##  # <<< NOVO (mesmo tratamento de NA do GPT-3.5-turbo)
+CP_gpt_6astra = read.csv(paste0(caminho_cp, "WideTable_Part2_all_countries_scores_gpt-6-astra.csv"))
+summary(CP_gpt_6astra) #confira quais colunas têm NA
+check = CP_gpt_6astra[!complete.cases(CP_gpt_6astra), c("country", "X.variant")] #países/variantes com NA
+
+CP_gpt_6astra <- na.omit(CP_gpt_6astra)
+
+colnames(CP_gpt_6astra)[colnames(CP_gpt_6astra) == "country"] ="country.territory"
+
+# <<< ALTERADO: variáveis nas colunas 4:13
+CP_coordinate_gpt_6astra = predict.psych(analysis, CP_gpt_6astra[,4:13], joint_data_for_fa[,5:14])
+CP_coordinate_gpt_6astra = as.data.frame(CP_coordinate_gpt_6astra)
+
+CP_coordinate_gpt_6astra$RC1 = 1.81 * CP_coordinate_gpt_6astra$RC1 + 0.38
+CP_coordinate_gpt_6astra$RC2 = 1.61 * CP_coordinate_gpt_6astra$RC2 - 0.01
+
+CP_coordinate_gpt_6astra$country.territory = CP_gpt_6astra$country.territory
+
+CP_coordinate_gpt_6astra = CP_coordinate_gpt_6astra %>%
+  group_by(country.territory) %>%
+  summarise(
+    RC1_cp_gpt_6astra = mean(RC1),
+    RC2_cp_gpt_6astra = mean(RC2)
+  )
+
+CP_coordinate_gpt_6astra$country.territory <- gsub("_", " ", CP_coordinate_gpt_6astra$country.territory)
+
+gpt6astra_l2_a_data = left_join(pca_result_country_level_selected, CP_coordinate_gpt_6astra, by = c('country.territory' = 'country.territory'))
+colnames(gpt6astra_l2_a_data)[colnames(gpt6astra_l2_a_data) == "RC1_final"] ="RC1_human_survey"
+colnames(gpt6astra_l2_a_data)[colnames(gpt6astra_l2_a_data) == "RC2_final"] ="RC2_human_survey"
+gpt6astra_l2_a_data$RC1_diff = gpt6astra_l2_a_data$RC1_cp_gpt_6astra - gpt6astra_l2_a_data$RC1_human_survey
+gpt6astra_l2_a_data$RC2_diff = gpt6astra_l2_a_data$RC2_cp_gpt_6astra - gpt6astra_l2_a_data$RC2_human_survey
+gpt6astra_l2_a_data <- gpt6astra_l2_a_data %>%
+  select(country.territory, everything())
+write.csv(gpt6astra_l2_a_data, "coordinates_on_map_gpt-6-astra.csv", row.names = FALSE)
+
+gpt6astra_l2_a_data$l2_a_gpt6astra = sqrt((gpt6astra_l2_a_data$RC1_human_survey - gpt6astra_l2_a_data$RC1_cp_gpt_6astra)^2 + (gpt6astra_l2_a_data$RC2_human_survey - gpt6astra_l2_a_data$RC2_cp_gpt_6astra)^2)
+gpt6astra_l2_a_data_select = subset(gpt6astra_l2_a_data, select = c(country.territory, l2_a_gpt6astra))
+
+
+###combine the results###
+l2_results = l2_results %>%
+  left_join(gpt4o_l2_a_data_select, by = c('country.territory' = 'country.territory')) %>%
+  left_join(gpt4turbo_l2_a_data_select, by = c('country.territory' = 'country.territory')) %>%
+  left_join(gpt4_l2_a_data_select, by = c('country.territory' = 'country.territory')) %>%
+  left_join(gpt3.5turbo_l2_a_data_select, by = c('country.territory' = 'country.territory')) %>%
+  left_join(gpt3_l2_a_data_select, by = c('country.territory' = 'country.territory')) %>%
+  left_join(gpt5.6terra_l2_a_data_select, by = c('country.territory' = 'country.territory')) %>%  # <<< NOVO
+  left_join(gpt6astra_l2_a_data_select, by = c('country.territory' = 'country.territory'))       # <<< NOVO
+write.csv(l2_results, "RQ2_CP_Responses_L2_Results.csv")
+
+
+###plot the distribution of L2_a and L2_c###
+
+# Convert the l2_results (wide table) to a long table
+long_table_l2_results <- gather(l2_results, key = "GPT.L2",value = "value", -country.territory)
+
+# <<< ALTERADO: incluídos os modelos novos (nomes l2_c_* conferidos com colnames(l2_results))
+long_table_l2_results$L2_type = if_else(long_table_l2_results$GPT.L2 == 'l2_c_gpt_3.5_turbo'|long_table_l2_results$GPT.L2 == 'l2_c_gpt_4'|long_table_l2_results$GPT.L2 == 'l2_c_gpt_4_turbo'|long_table_l2_results$GPT.L2 == 'l2_c_gpt_4o'|long_table_l2_results$GPT.L2 == 'l2_c_gpt_3'|long_table_l2_results$GPT.L2 == 'l2_c_gpt_5.6'|long_table_l2_results$GPT.L2 == 'l2_c_gpt_6_astra', 'Without Cultural Prompting', 'pending')
+long_table_l2_results$L2_type = if_else(long_table_l2_results$GPT.L2 == 'l2_a_gpt3.5turbo'|long_table_l2_results$GPT.L2 == 'l2_a_gpt4'|long_table_l2_results$GPT.L2 == 'l2_a_gpt4turbo'|long_table_l2_results$GPT.L2 == 'l2_a_gpt4o'|long_table_l2_results$GPT.L2 == 'l2_a_gpt3'|long_table_l2_results$GPT.L2 == 'l2_a_gpt5.6terra'|long_table_l2_results$GPT.L2 == 'l2_a_gpt6astra', 'With Cultural Prompting', long_table_l2_results$L2_type) 
+
+long_table_l2_results$GPT_version = if_else(long_table_l2_results$GPT.L2 == 'l2_a_gpt3.5turbo'|long_table_l2_results$GPT.L2 == 'l2_c_gpt_3.5_turbo', 'GPT-3.5-turbo', 'pending')
+long_table_l2_results$GPT_version = if_else(long_table_l2_results$GPT.L2 == 'l2_a_gpt4'|long_table_l2_results$GPT.L2 == 'l2_c_gpt_4', 'GPT-4', long_table_l2_results$GPT_version)
+long_table_l2_results$GPT_version = if_else(long_table_l2_results$GPT.L2 == 'l2_a_gpt4turbo'|long_table_l2_results$GPT.L2 == 'l2_c_gpt_4_turbo', 'GPT-4 Turbo', long_table_l2_results$GPT_version)
+long_table_l2_results$GPT_version = if_else(long_table_l2_results$GPT.L2 == 'l2_a_gpt4o'|long_table_l2_results$GPT.L2 == 'l2_c_gpt_4o', 'GPT-4o', long_table_l2_results$GPT_version)
+long_table_l2_results$GPT_version = if_else(long_table_l2_results$GPT.L2 == 'l2_a_gpt3'|long_table_l2_results$GPT.L2 == 'l2_c_gpt_3', 'GPT-3', long_table_l2_results$GPT_version)
+# <<< NOVO
+long_table_l2_results$GPT_version = if_else(long_table_l2_results$GPT.L2 == 'l2_a_gpt5.6terra'|long_table_l2_results$GPT.L2 == 'l2_c_gpt_5.6', 'GPT-5.6-terra', long_table_l2_results$GPT_version)
+long_table_l2_results$GPT_version = if_else(long_table_l2_results$GPT.L2 == 'l2_a_gpt6astra'|long_table_l2_results$GPT.L2 == 'l2_c_gpt_6_astra', 'GPT-6-astra', long_table_l2_results$GPT_version)
+
+
+long_table_l2_results$L2_type <- factor(long_table_l2_results$L2_type, levels = c("Without Cultural Prompting", "With Cultural Prompting"))
+RQ2_box_plot = ggplot(data = long_table_l2_results, aes(x = GPT_version, y=value, fill = L2_type)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("#CC79A7", "#0072B2")) +
+  theme_classic() +
+  theme(legend.position = "top",
+        legend.title = element_blank(),
+        axis.title.x = element_blank()
+  ) +
+  ylab("Cultural Gap (L2 distance for each country/territory)") 
+
+ggsave(filename = "RQ2_Cultural_Distance_Boxplot.png", plot = RQ2_box_plot, width = 7, height = 5) #Figure 2 in the main paper
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
