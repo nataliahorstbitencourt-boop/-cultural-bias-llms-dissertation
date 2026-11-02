@@ -8,10 +8,14 @@ library(haven)
 #####Part 0: Replicate the Inglehart-Welzel World Cultural Map#####
 ###Load WVS and EVS Data###
 #Source: https://www.worldvaluessurvey.org/WVSEVStrend.jsp
-wvs_timeseries_data = readRDS("../New Analysis on TimeSeries Data:/WVS_trends_3_0.rds")
+# Load WVS and EVS Data
+
+wvs_timeseries_data = readRDS("/Users/nataliahorst/Desktop/Projetos R/Dissertação no R/Subgrupos/WVS_trends_3_0.rds")
 length(unique(wvs_timeseries_data$s003)) #Note: 108 countries/territories from the WVS dataset
-evs_timeseries_data = read_dta("../New Analysis on TimeSeries Data:/ZA7503_v3-0-0.dta 2/ZA7503_v3-0-0.dta")
+
+evs_timeseries_data = read_dta("/Users/nataliahorst/Desktop/Projetos R/Dissertação no R/Subgrupos/ZA7503_v3-0-0.dta 2/ZA7503_v3-0-0.dta")
 length(unique(evs_timeseries_data$S003)) #Note: 49 countries/territories from the EVS dataset
+
 
 
 ###Merge WVS and EVS Data###
@@ -96,7 +100,7 @@ pca_result_country_level = joint_data_for_fa %>%
   summarise(RC1_final = mean(RC1_mean),
             RC2_final = mean(RC2_mean)) #calculate the mean PC scores for each country/territory
 
-country_code = read.csv("../New Analysis on TimeSeries Data:/s003.csv") #get the country/territory names
+country_code = read.csv("/Users/nataliahorst/Desktop/Projetos R/Dissertação no R/Subgrupos/s003.csv") #get the country/territory names 
 pca_result_country_level = left_join(pca_result_country_level, country_code, by = c('s003' = 's003'))
 
 plot1 = ggplot(pca_result_country_level, aes(x = RC1_final, y = RC2_final, label = country.territory, color = Category)) +
@@ -114,6 +118,7 @@ plot1 = ggplot(pca_result_country_level, aes(x = RC1_final, y = RC2_final, label
   labs(x = "Survival vs. Self-Expression Values", y = "Traditional vs. Secular Values")
 # ggtitle("Replication of Inglehart-Welzel World Cultural Map")
 plot1
+
 
 
 
