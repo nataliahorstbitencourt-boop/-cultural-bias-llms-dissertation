@@ -1,0 +1,378 @@
+Eu queria as tabelas em csv certinhas com o resultado, especialmente dessa parte estatistica inciial:
+
+
+
+
+###Additional Statistical Analysis###
+#GPT-3
+shapiro.test(l2_results$l2_c_gpt_3) #not normal distribution
+shapiro.test(l2_results$l2_a_gpt3) #not normal distribution
+mean(l2_results$l2_c_gpt_3) #2.39
+mean(l2_results$l2_a_gpt3) #2.11
+wilcox.test(l2_results$l2_c_gpt_3, l2_results$l2_a_gpt3,paired = TRUE) #p-value = 3.942e-08
+
+#GPT-3.5 Turbo
+shapiro.test(l2_results$l2_c_gpt_3.5_turbo) #not normal distribution
+shapiro.test(l2_results$l2_a_gpt3.5turbo) #not normal distribution
+mean(l2_results$l2_c_gpt_3.5_turbo) #3.35
+mean(l2_results$l2_a_gpt3.5turbo, na.rm = TRUE) #2.83
+wilcox.test(l2_results$l2_c_gpt_3.5_turbo, l2_results$l2_a_gpt3.5turbo,paired = TRUE)
+
+#GPT-4
+shapiro.test(l2_results$l2_c_gpt_4)#not normal distribution
+shapiro.test(l2_results$l2_a_gpt4)#normal
+mean(l2_results$l2_c_gpt_4) #2.69
+mean(l2_results$l2_a_gpt4) #1.65
+wilcox.test(l2_results$l2_c_gpt_4, l2_results$l2_a_gpt4,paired = TRUE)
+
+#GPT-4 Turbo
+shapiro.test(l2_results$l2_c_gpt_4_turbo) #not normal
+shapiro.test(l2_results$l2_a_gpt4turbo) #normal
+mean(l2_results$l2_c_gpt_4_turbo) #2.71
+mean(l2_results$l2_a_gpt4turbo) #1.77
+wilcox.test(l2_results$l2_c_gpt_4_turbo, l2_results$l2_a_gpt4turbo,paired = TRUE)
+
+#GPT-4o
+shapiro.test(l2_results$l2_c_gpt_4o) #not normal
+shapiro.test(l2_results$l2_a_gpt4o) #normal
+mean(l2_results$l2_c_gpt_4o) #2.42
+mean(l2_results$l2_a_gpt4o) #1.57
+wilcox.test(l2_results$l2_c_gpt_4o, l2_results$l2_a_gpt4o,paired = TRUE)
+
+#GPT-5.6
+shapiro.test(l2_results$l2_c_gpt_5.6)
+shapiro.test(l2_results$l2_a_gpt5.6terra)
+mean(l2_results$l2_c_gpt_5.6)
+mean(l2_results$l2_a_gpt5.6terra)
+wilcox.test(l2_results$l2_c_gpt_5.6, l2_results$l2_a_gpt5.6terra, paired = TRUE)
+
+#GPT-6-astra
+shapiro.test(l2_results$l2_c_gpt_6_astra)
+shapiro.test(l2_results$l2_a_gpt6astra)
+mean(l2_results$l2_c_gpt_6_astra)
+mean(l2_results$l2_a_gpt6astra)
+wilcox.test(l2_results$l2_c_gpt_6_astra, l2_results$l2_a_gpt6astra, paired = TRUE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###Variance due to prompt wording###
+plot_grey =  ggplot(pca_result_country_level, aes(x = RC1_final, y = RC2_final, label = country.territory)) +
+  geom_point(color = "grey") +
+  geom_text_repel(aes(label = country.territory), box.padding = unit(0.25, "lines"), max.overlaps = 7, color = "grey") +
+  theme_classic() +
+  theme(
+    axis.line.x = element_line(color = "grey"),  
+    axis.line.y = element_line(color = "grey")
+  ) + 
+  scale_x_continuous(breaks = c(-2.50, -2.00, -1.50, -1.00, -0.50, 0.00, 0.50, 1.00, 1.50, 2.00, 2.50, 3.00, 3.50)) +
+  scale_y_continuous(breaks = c(-2.50, -2.00, -1.50, -1.00, -0.50, 0.00, 0.50, 1.00, 1.50, 2.00)) +
+  labs(x = "Survival vs. Self-Expression Values", y = "Traditional vs. Secular Values")
+
+
+
+model = c('GPT-3.5-turbo', 'GPT-4', 'GPT-4-turbo', 'GPT-4o', 'GPT-5.6', 'GPT-6-astra')
+mean_d_to_avg = c(0,0,0,0,0,0)
+combined_prompt_varaince_df = data.frame(model, mean_d_to_avg)
+
+
+
+
+
+
+#GPT-3.5 Turbo
+plot_3.5_variance_df = general_coordinate_gpt_3.5_turbo
+plot_3.5_variance_df$label = c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+plot_3.5_variance = plot_grey + geom_point (data = plot_3.5_variance_df, aes(x = RC1, y = RC2),color = "red",inherit.aes = FALSE) +
+  geom_text_repel(data = plot_3.5_variance_df, aes(x = RC1, y = RC2, label = label), nudge_x = 0.1, nudge_y = 0.1)
+ggsave(filename = "RQ1_GPT-3.5-turbo_variance_on_map.png", plot = plot_3.5_variance, width = 8, height = 7)
+
+general_coordinate_gpt_3.5_turbo$d_to_avg = sqrt((general_coordinate_gpt_3.5_turbo$RC1 - general_gpt$RC1_final[general_gpt$model == "GPT-3.5-turbo"])^2 + (general_coordinate_gpt_3.5_turbo$RC2 - general_gpt$RC2_final[general_gpt$model == "GPT-3.5-turbo"])^2)
+combined_prompt_varaince_df$mean_d_to_avg[combined_prompt_varaince_df$model == "GPT-3.5-turbo"] = mean(general_coordinate_gpt_3.5_turbo$d_to_avg)
+combined_prompt_varaince_df$mean_d_to_avg[combined_prompt_varaince_df$model == "GPT-3.5-turbo"] = mean(general_coordinate_gpt_3.5_turbo$d_to_avg)
+combined_prompt_varaince_df$se_d_to_avg[combined_prompt_varaince_df$model == "GPT-3.5-turbo"] = sd(general_coordinate_gpt_3.5_turbo$d_to_avg)/sqrt(length(general_coordinate_gpt_3.5_turbo$d_to_avg))
+
+
+#GPT-4
+plot_4_variance_df = general_coordinate_gpt_4_0613
+plot_4_variance_df$label = c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+plot_4_variance = plot_grey + geom_point (data = plot_4_variance_df, aes(x = RC1, y = RC2),color = "red",inherit.aes = FALSE) +
+  geom_text_repel(data = plot_4_variance_df, aes(x = RC1, y = RC2, label = label), nudge_x = 0.1, nudge_y = 0.1)
+ggsave(filename = "RQ1_GPT-4_variance_on_map.png", plot = plot_4_variance, width = 8, height = 7)
+
+general_coordinate_gpt_4_0613$d_to_avg = sqrt((general_coordinate_gpt_4_0613$RC1 - general_gpt$RC1_final[general_gpt$model == "GPT-4"])^2 + (general_coordinate_gpt_4_0613$RC2 - general_gpt$RC2_final[general_gpt$model == "GPT-4"])^2)
+combined_prompt_varaince_df$mean_d_to_avg[combined_prompt_varaince_df$model == "GPT-4"] = mean(general_coordinate_gpt_4_0613$d_to_avg)
+combined_prompt_varaince_df$se_d_to_avg[combined_prompt_varaince_df$model == "GPT-4"] = sd(general_coordinate_gpt_4_0613$d_to_avg)/sqrt(length(general_coordinate_gpt_4_0613$d_to_avg))
+
+
+#GPT-4-turbo
+plot_4turbo_variance_df = general_coordinate_gpt_4_turbo
+plot_4turbo_variance_df$label = c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+plot_4turbo_variance = plot_grey + geom_point (data = plot_4turbo_variance_df, aes(x = RC1, y = RC2),color = "red",inherit.aes = FALSE) +
+  geom_text_repel(data = plot_4turbo_variance_df, aes(x = RC1, y = RC2, label = label), nudge_x = 0.1, nudge_y = 0.1)
+ggsave(filename = "RQ1_GPT-4-turbo_variance_on_map.png", plot = plot_4turbo_variance, width = 8, height = 7)
+
+general_coordinate_gpt_4_turbo$d_to_avg = sqrt((general_coordinate_gpt_4_turbo$RC1 - general_gpt$RC1_final[general_gpt$model == "GPT-4-turbo"])^2 + (general_coordinate_gpt_4_turbo$RC2 - general_gpt$RC2_final[general_gpt$model == "GPT-4-turbo"])^2)
+combined_prompt_varaince_df$mean_d_to_avg[combined_prompt_varaince_df$model == "GPT-4-turbo"] = mean(general_coordinate_gpt_4_turbo$d_to_avg)
+combined_prompt_varaince_df$se_d_to_avg[combined_prompt_varaince_df$model == "GPT-4-turbo"] = sd(general_coordinate_gpt_4_turbo$d_to_avg)/sqrt(length(general_coordinate_gpt_4_turbo$d_to_avg))
+
+#GPT-4o
+plot_4o_variance_df = general_coordinate_gpt_4o
+plot_4o_variance_df$label = c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+plot_4o_variance = plot_grey + geom_point (data = plot_4o_variance_df, aes(x = RC1, y = RC2),color = "red",inherit.aes = FALSE) +
+  geom_text_repel(data = plot_4o_variance_df, aes(x = RC1, y = RC2, label = label), nudge_x = 0.1, nudge_y = 0.1)
+ggsave(filename = "RQ1_GPT-4o_variance_on_map.png", plot = plot_4o_variance, width = 8, height = 7)
+
+general_coordinate_gpt_4o$d_to_avg = sqrt((general_coordinate_gpt_4o$RC1 - general_gpt$RC1_final[general_gpt$model == "GPT-4o"])^2 + (general_coordinate_gpt_4o$RC2 - general_gpt$RC2_final[general_gpt$model == "GPT-4o"])^2)
+combined_prompt_varaince_df$mean_d_to_avg[combined_prompt_varaince_df$model == "GPT-4o"] = mean(general_coordinate_gpt_4o$d_to_avg)
+combined_prompt_varaince_df$se_d_to_avg[combined_prompt_varaince_df$model == "GPT-4o"] = sd(general_coordinate_gpt_4o$d_to_avg)/sqrt(length(general_coordinate_gpt_4o$d_to_avg))
+
+
+#GPT-5.6
+plot_5.6_variance_df = general_coordinate_gpt_5_6
+plot_5.6_variance_df$label = c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+plot_5.6_variance = plot_grey + geom_point (data = plot_5.6_variance_df, aes(x = RC1, y = RC2),color = "red",inherit.aes = FALSE) +
+  geom_text_repel(data = plot_5.6_variance_df, aes(x = RC1, y = RC2, label = label), nudge_x = 0.1, nudge_y = 0.1)
+ggsave(filename = "RQ1_GPT-5.6_variance_on_map.png", plot = plot_5.6_variance, width = 8, height = 7)
+
+general_coordinate_gpt_5_6$d_to_avg = sqrt((general_coordinate_gpt_5_6$RC1 - general_gpt$RC1_final[general_gpt$model == "GPT-5.6"])^2 + (general_coordinate_gpt_5_6$RC2 - general_gpt$RC2_final[general_gpt$model == "GPT-5.6"])^2)
+combined_prompt_varaince_df$mean_d_to_avg[combined_prompt_varaince_df$model == "GPT-5.6"] = mean(general_coordinate_gpt_5_6$d_to_avg)
+combined_prompt_varaince_df$se_d_to_avg[combined_prompt_varaince_df$model == "GPT-5.6"] = sd(general_coordinate_gpt_5_6$d_to_avg)/sqrt(length(general_coordinate_gpt_5_6$d_to_avg))
+
+#GPT-6-astra
+plot_6_astra_variance_df = general_coordinate_gpt_6_astra
+plot_6_astra_variance_df$label = c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+plot_6_astra_variance = plot_grey + geom_point (data = plot_6_astra_variance_df, aes(x = RC1, y = RC2),color = "red",inherit.aes = FALSE) +
+  geom_text_repel(data = plot_6_astra_variance_df, aes(x = RC1, y = RC2, label = label), nudge_x = 0.1, nudge_y = 0.1)
+ggsave(filename = "RQ1_GPT-6-astra_variance_on_map.png", plot = plot_6_astra_variance, width = 8, height = 7)
+
+general_coordinate_gpt_6_astra$d_to_avg = sqrt((general_coordinate_gpt_6_astra$RC1 - general_gpt$RC1_final[general_gpt$model == "GPT-6-astra"])^2 + (general_coordinate_gpt_6_astra$RC2 - general_gpt$RC2_final[general_gpt$model == "GPT-6-astra"])^2)
+combined_prompt_varaince_df$mean_d_to_avg[combined_prompt_varaince_df$model == "GPT-6-astra"] = mean(general_coordinate_gpt_6_astra$d_to_avg)
+combined_prompt_varaince_df$se_d_to_avg[combined_prompt_varaince_df$model == "GPT-6-astra"] = sd(general_coordinate_gpt_6_astra$d_to_avg)/sqrt(length(general_coordinate_gpt_6_astra$d_to_avg))
+
+
+#Indicate the setting
+combined_prompt_varaince_df$Type = "Without Cultural Prompting"
+
+
+
+
+
+
+
+
+
+
+
+#GPT-3-turbo with cultural prompting
+CP_gpt_3.5turbo = read.csv("/Users/nataliahorst/Desktop/Projetos R/Resultados ORIGINAL e NOVO/Analysis_Part2_Localized_Cultural_Values-archive/WideTable_Part2_all_district_scores_gpt-3.5-turbo-0613.csv")
+
+CP_gpt_3.5turbo <- na.omit(CP_gpt_3.5turbo)
+
+colnames(CP_gpt_3.5turbo)[colnames(CP_gpt_3.5turbo) == "country"] ="country.territory"
+
+CP_coordinate_gpt_3.5turbo = predict.psych(analysis, CP_gpt_3.5turbo[,3:12], joint_data_for_fa[,5:14])
+CP_coordinate_gpt_3.5turbo = as.data.frame(CP_coordinate_gpt_3.5turbo)
+
+CP_coordinate_gpt_3.5turbo$RC1 = 1.81 * CP_coordinate_gpt_3.5turbo$RC1 + 0.38
+CP_coordinate_gpt_3.5turbo$RC2 = 1.61 * CP_coordinate_gpt_3.5turbo$RC2 - 0.01
+
+CP_coordinate_gpt_3.5turbo$country.territory = CP_gpt_3.5turbo$country.territory
+
+CP_coordinate_gpt_3.5turbo_for_variance_plot = CP_coordinate_gpt_3.5turbo %>%
+  group_by(country.territory) %>%
+  mutate(
+    RC1_cp_gpt_3.5turbo = mean(RC1),
+    RC2_cp_gpt_3.5turbo = mean(RC2)
+  )
+CP_coordinate_gpt_3.5turbo_for_variance_plot$d_to_avg = sqrt((CP_coordinate_gpt_3.5turbo_for_variance_plot$RC1 - CP_coordinate_gpt_3.5turbo_for_variance_plot$RC1_cp_gpt_3.5turbo)^2 + (CP_coordinate_gpt_3.5turbo_for_variance_plot$RC2 - CP_coordinate_gpt_3.5turbo_for_variance_plot$RC2_cp_gpt_3.5turbo)^2)
+
+CP_coordinate_gpt_3.5turbo_for_variance_plot = CP_coordinate_gpt_3.5turbo_for_variance_plot %>%
+  group_by(country.territory) %>%
+  summarise(mean_d_to_avg = mean(d_to_avg))
+
+new_row = c("GPT-3.5-turbo", mean(CP_coordinate_gpt_3.5turbo_for_variance_plot$mean_d_to_avg), sd(CP_coordinate_gpt_3.5turbo_for_variance_plot$mean_d_to_avg)/sqrt(length(CP_coordinate_gpt_3.5turbo_for_variance_plot$mean_d_to_avg)), "With Cultural Prompting")
+combined_prompt_varaince_df = rbind(combined_prompt_varaince_df, new_row)
+
+
+#GPT-4 with cultural prompting
+CP_gpt_4 = read.csv("/Users/nataliahorst/Desktop/Projetos R/Resultados ORIGINAL e NOVO/Analysis_Part2_Localized_Cultural_Values-archive/WideTable_Part2_all_district_scores_gpt-4-0613.csv")
+colnames(CP_gpt_4)[colnames(CP_gpt_4) == "country"] ="country.territory"
+
+CP_coordinate_gpt_4 = predict.psych(analysis, CP_gpt_4[,3:12], joint_data_for_fa[,5:14])
+CP_coordinate_gpt_4 = as.data.frame(CP_coordinate_gpt_4)
+
+CP_coordinate_gpt_4$RC1 = 1.81 * CP_coordinate_gpt_4$RC1 + 0.38
+CP_coordinate_gpt_4$RC2 = 1.61 * CP_coordinate_gpt_4$RC2 - 0.01
+
+CP_coordinate_gpt_4$country.territory = CP_gpt_4$country.territory
+
+CP_coordinate_gpt_4_for_variance_plot = CP_coordinate_gpt_4 %>%
+  group_by(country.territory) %>%
+  mutate(
+    RC1_cp_gpt_4 = mean(RC1),
+    RC2_cp_gpt_4 = mean(RC2)
+  )
+
+CP_coordinate_gpt_4_for_variance_plot$d_to_avg = sqrt((CP_coordinate_gpt_4_for_variance_plot$RC1 - CP_coordinate_gpt_4_for_variance_plot$RC1_cp_gpt_4)^2 + (CP_coordinate_gpt_4_for_variance_plot$RC2 - CP_coordinate_gpt_4_for_variance_plot$RC2_cp_gpt_4)^2)
+
+CP_coordinate_gpt_4_for_variance_plot = CP_coordinate_gpt_4_for_variance_plot %>%
+  group_by(country.territory) %>%
+  summarise(mean_d_to_avg = mean(d_to_avg))
+
+new_row = c("GPT-4", mean(CP_coordinate_gpt_4_for_variance_plot$mean_d_to_avg), sd(CP_coordinate_gpt_4_for_variance_plot$mean_d_to_avg)/sqrt(length(CP_coordinate_gpt_4_for_variance_plot$mean_d_to_avg)), "With Cultural Prompting")
+combined_prompt_varaince_df = rbind(combined_prompt_varaince_df, new_row)
+
+
+#GPT-4 Turbo with cultural prompting
+CP_gpt_4turbo = read.csv("/Users/nataliahorst/Desktop/Projetos R/Resultados ORIGINAL e NOVO/Analysis_Part2_Localized_Cultural_Values-archive/WideTable_Part2_all_district_scores_gpt-4-turbo-2024-04-09.csv")
+colnames(CP_gpt_4turbo)[colnames(CP_gpt_4turbo) == "country"] ="country.territory"
+
+CP_coordinate_gpt_4turbo = predict.psych(analysis, CP_gpt_4turbo[,3:12], joint_data_for_fa[,5:14])
+CP_coordinate_gpt_4turbo = as.data.frame(CP_coordinate_gpt_4turbo)
+
+CP_coordinate_gpt_4turbo$RC1 = 1.81 * CP_coordinate_gpt_4turbo$RC1 + 0.38
+CP_coordinate_gpt_4turbo$RC2 = 1.61 * CP_coordinate_gpt_4turbo$RC2 - 0.01
+
+CP_coordinate_gpt_4turbo$country.territory = CP_gpt_4turbo$country.territory
+
+CP_coordinate_gpt_4turbo_for_variance_plot = CP_coordinate_gpt_4turbo %>%
+  group_by(country.territory) %>%
+  mutate(
+    RC1_cp_gpt_4turbo = mean(RC1),
+    RC2_cp_gpt_4turbo = mean(RC2)
+  )
+
+CP_coordinate_gpt_4turbo_for_variance_plot$d_to_avg = sqrt((CP_coordinate_gpt_4turbo_for_variance_plot$RC1 - CP_coordinate_gpt_4turbo_for_variance_plot$RC1_cp_gpt_4turbo)^2 + (CP_coordinate_gpt_4turbo_for_variance_plot$RC2 - CP_coordinate_gpt_4turbo_for_variance_plot$RC2_cp_gpt_4turbo)^2)
+
+CP_coordinate_gpt_4turbo_for_variance_plot = CP_coordinate_gpt_4turbo_for_variance_plot %>%
+  group_by(country.territory) %>%
+  summarise(mean_d_to_avg = mean(d_to_avg))
+
+new_row = c("GPT-4-turbo", mean(CP_coordinate_gpt_4turbo_for_variance_plot$mean_d_to_avg), sd(CP_coordinate_gpt_4turbo_for_variance_plot$mean_d_to_avg)/sqrt(length(CP_coordinate_gpt_4turbo_for_variance_plot$mean_d_to_avg)), "With Cultural Prompting")
+combined_prompt_varaince_df = rbind(combined_prompt_varaince_df, new_row)
+
+
+#GPT-4o with cultural prompting
+CP_gpt_4o = read.csv("/Users/nataliahorst/Desktop/Projetos R/Resultados ORIGINAL e NOVO/Analysis_Part2_Localized_Cultural_Values-archive/WideTable_Part2_all_district_scores_gpt-4o-2024-05-13.csv")
+colnames(CP_gpt_4o)[colnames(CP_gpt_4o) == "country"] ="country.territory"
+
+CP_coordinate_gpt_4o = predict.psych(analysis, CP_gpt_4o[,3:12], joint_data_for_fa[,5:14])
+CP_coordinate_gpt_4o = as.data.frame(CP_coordinate_gpt_4o)
+
+CP_coordinate_gpt_4o$RC1 = 1.81 * CP_coordinate_gpt_4o$RC1 + 0.38
+CP_coordinate_gpt_4o$RC2 = 1.61 * CP_coordinate_gpt_4o$RC2 - 0.01
+
+CP_coordinate_gpt_4o$country.territory = CP_gpt_4o$country.territory
+
+CP_coordinate_gpt_4o_for_variance_plot = CP_coordinate_gpt_4o %>%
+  group_by(country.territory) %>%
+  mutate(
+    RC1_cp_gpt_4o = mean(RC1),
+    RC2_cp_gpt_4o = mean(RC2)
+  )
+CP_coordinate_gpt_4o_for_variance_plot$d_to_avg = sqrt((CP_coordinate_gpt_4o_for_variance_plot$RC1 - CP_coordinate_gpt_4o_for_variance_plot$RC1_cp_gpt_4o)^2 + (CP_coordinate_gpt_4o_for_variance_plot$RC2 - CP_coordinate_gpt_4o_for_variance_plot$RC2_cp_gpt_4o)^2)
+
+CP_coordinate_gpt_4o_for_variance_plot = CP_coordinate_gpt_4o_for_variance_plot %>%
+  group_by(country.territory) %>%
+  summarise(mean_d_to_avg = mean(d_to_avg))
+
+new_row = c("GPT-4o", mean(CP_coordinate_gpt_4o_for_variance_plot$mean_d_to_avg), sd(CP_coordinate_gpt_4o_for_variance_plot$mean_d_to_avg)/sqrt(length(CP_coordinate_gpt_4o_for_variance_plot$mean_d_to_avg)), "With Cultural Prompting")
+combined_prompt_varaince_df = rbind(combined_prompt_varaince_df, new_row)
+
+
+
+
+
+#GPT-5.6 with cultural prompting
+CP_gpt_5.6 = read.csv("/Users/nataliahorst/Desktop/Projetos R/Resultados ORIGINAL e NOVO/Analysis_Part2_Localized_Cultural_Values-archive/WideTable_Part2_all_countries_scores_gpt-5.6-terra.csv")
+
+CP_gpt_5.6 <- na.omit(CP_gpt_5.6)
+
+colnames(CP_gpt_5.6)[colnames(CP_gpt_5.6) == "country"] ="country.territory"
+
+CP_coordinate_gpt_5.6 = predict.psych(analysis, CP_gpt_5.6[,4:13], joint_data_for_fa[,5:14])
+CP_coordinate_gpt_5.6 = as.data.frame(CP_coordinate_gpt_5.6)
+
+CP_coordinate_gpt_5.6$RC1 = 1.81 * CP_coordinate_gpt_5.6$RC1 + 0.38
+CP_coordinate_gpt_5.6$RC2 = 1.61 * CP_coordinate_gpt_5.6$RC2 - 0.01
+
+CP_coordinate_gpt_5.6$country.territory = CP_gpt_5.6$country.territory
+
+CP_coordinate_gpt_5.6_for_variance_plot = CP_coordinate_gpt_5.6 %>%
+  group_by(country.territory) %>%
+  mutate(
+    RC1_cp_gpt_5.6 = mean(RC1),
+    RC2_cp_gpt_5.6 = mean(RC2)
+  )
+CP_coordinate_gpt_5.6_for_variance_plot$d_to_avg = sqrt((CP_coordinate_gpt_5.6_for_variance_plot$RC1 - CP_coordinate_gpt_5.6_for_variance_plot$RC1_cp_gpt_5.6)^2 + (CP_coordinate_gpt_5.6_for_variance_plot$RC2 - CP_coordinate_gpt_5.6_for_variance_plot$RC2_cp_gpt_5.6)^2)
+
+CP_coordinate_gpt_5.6_for_variance_plot = CP_coordinate_gpt_5.6_for_variance_plot %>%
+  group_by(country.territory) %>%
+  summarise(mean_d_to_avg = mean(d_to_avg))
+
+new_row = c("GPT-5.6", mean(CP_coordinate_gpt_5.6_for_variance_plot$mean_d_to_avg), sd(CP_coordinate_gpt_5.6_for_variance_plot$mean_d_to_avg)/sqrt(length(CP_coordinate_gpt_5.6_for_variance_plot$mean_d_to_avg)), "With Cultural Prompting")
+combined_prompt_varaince_df = rbind(combined_prompt_varaince_df, new_row)
+
+#GPT-6 with cultural prompting
+CP_gpt_6 = read.csv("/Users/nataliahorst/Desktop/Projetos R/Resultados ORIGINAL e NOVO/Analysis_Part2_Localized_Cultural_Values-archive/WideTable_Part2_all_countries_scores_gpt-6-astra.csv")
+colnames(CP_gpt_6)[colnames(CP_gpt_6) == "country"] ="country.territory"
+
+CP_coordinate_gpt_6 = predict.psych(analysis, CP_gpt_6[,4:13], joint_data_for_fa[,5:14])
+CP_coordinate_gpt_6 = as.data.frame(CP_coordinate_gpt_6)
+
+CP_coordinate_gpt_6$RC1 = 1.81 * CP_coordinate_gpt_6$RC1 + 0.38
+CP_coordinate_gpt_6$RC2 = 1.61 * CP_coordinate_gpt_6$RC2 - 0.01
+
+CP_coordinate_gpt_6$country.territory = CP_gpt_6$country.territory
+
+CP_coordinate_gpt_6_for_variance_plot = CP_coordinate_gpt_6 %>%
+  group_by(country.territory) %>%
+  mutate(
+    RC1_cp_gpt_6 = mean(RC1),
+    RC2_cp_gpt_6 = mean(RC2)
+  )
+CP_coordinate_gpt_6_for_variance_plot$d_to_avg = sqrt((CP_coordinate_gpt_6_for_variance_plot$RC1 - CP_coordinate_gpt_6_for_variance_plot$RC1_cp_gpt_6)^2 + (CP_coordinate_gpt_6_for_variance_plot$RC2 - CP_coordinate_gpt_6_for_variance_plot$RC2_cp_gpt_6)^2)
+
+CP_coordinate_gpt_6_for_variance_plot = CP_coordinate_gpt_6_for_variance_plot %>%
+  group_by(country.territory) %>%
+  summarise(mean_d_to_avg = mean(d_to_avg))
+
+
+new_row = c("GPT-6-astra", mean(CP_coordinate_gpt_6_for_variance_plot$mean_d_to_avg), sd(CP_coordinate_gpt_6_for_variance_plot$mean_d_to_avg)/sqrt(length(CP_coordinate_gpt_6_for_variance_plot$mean_d_to_avg)), "With Cultural Prompting")
+combined_prompt_varaince_df = rbind(combined_prompt_varaince_df, new_row)
+
+
+combined_prompt_varaince_df$mean_d_to_avg = as.numeric(combined_prompt_varaince_df$mean_d_to_avg)
+combined_prompt_varaince_df$se_d_to_avg = as.numeric(combined_prompt_varaince_df$se_d_to_avg)
+
+combined_prompt_varaince_df$Type = factor(combined_prompt_varaince_df$Type, levels = c("Without Cultural Prompting", "With Cultural Prompting"))
+
+combined_prompt_varaince_plot = ggplot(data = combined_prompt_varaince_df, aes(x=model, y=mean_d_to_avg, fill=Type)) +
+  geom_hline(yintercept = 0.50, linetype = "dashed", color = "black") +
+  geom_hline(yintercept = 1.01, linetype = "dashed", color = "black") +
+  geom_hline(yintercept = 1.51, linetype = "dashed", color = "black") +
+  geom_bar(position=position_dodge(), stat="identity", colour='black') +
+  scale_fill_manual(values = c("#CC79A7","#0072B2")) +
+  geom_errorbar(aes(ymin = mean_d_to_avg - se_d_to_avg, ymax = mean_d_to_avg+ se_d_to_avg), width=.2,position=position_dodge(.9)) +
+  theme_classic() +
+  theme(
+    legend.position = "top",
+    legend.title = element_blank(),
+    axis.title.x = element_blank()
+  ) +
+  ylab("Average Mean Absolute Deviation of L2 Distance") 
+
+
+ggsave(filename = "Variance_Boxplot.png", plot = combined_prompt_varaince_plot, width = 7, height = 5)
+
