@@ -1,4 +1,4 @@
-PILOTOS 1 e 2
+PILOTO 1
 
 VERSÕES GPT UTILIZADAS PELOS AUTORES: GPT-3.5-turbo, GPT-4, GPT-4-turbo, GPT-4o VERSÕES GPT A SEREM UTILIZADAS: GPT 5.6 Terra e GPT 6 Astra
 
@@ -16,18 +16,6 @@ Modelo: GPT 6 Astra Versão: gpt-6-astra Custo Estimado: US$ 24,61 Informações
 
 PILOTO_TESTES_1:
 
-Teste 1: Modelo: gpt-5-2025-08-07 reasoning_effort="minimal", max_completion_tokens=256 Resultado: Segundo melhor resultado entre os GPTs 5.
-
-Teste 2: Modelo: gpt-5-2025-08-07 reasoning_effort="medium", max_completion_tokens=512 Resultado: Pior resultado entre os modelos GPT 5. Modelo não respondeu algumas perguntas. Aumentar tokens.
-
-Teste 3: Modelo: gpt-5-2025-08-07 reasoning_effort="low", max_completion_tokens= 1024 verbosity="low" Resultado: Melhor resultado entre os modelos GPT 5 quando avaliada a média. Aumentar os tokens.
-
-Teste 1: Modelo: gpt-6-astra Parâmetros do estudo: reasoning.effort: low max_completion_tokens: 512 Resultado: Tokens suficientes.
-
-Teste 2: Modelo: gpt-6-astra Parâmetros do estudo: reasoning.effort: high max_completion_tokens: 1024 Resultado: Tokens suficientes. Resultado melhor, mas pouca diferença.
-
-PILOTO_TESTES_2:
-
 TESTE 01 Modelo: gpt-5-2025-08-07 reasoning.effort: Low max_completion_tokens: 2000
 
 TESTE 02 Modelo: gpt-5-2025-08-07 reasoning.effort: Medium max_completion_tokens: 2000
@@ -40,7 +28,7 @@ TESTE 05 Modelo: GPT 5.6 Terra reasoning.effort: Low max_completion_tokens: 1600
 
 TESTE 06 Modelo: GPT 5.6 Terra reasoning.effort: Medium max_completion_tokens: 1600
 
-Resultados Piloto 2: Tive que aumentar o número de tokens do gpt-5-2025-08-07, o que acabou deixando caro os testes com esse modelo. Ambos os testes com o GPT 5 tiveram, cada um, uma resposta textual, sem score, que coloquei como NA. Para fazer a parte estatística, retirei a linha que continha os NAs da análise. Todos os modelos testados exibiram um viés forte de auto-expressão e de valores seculares-racionais. Em geral, os modelos com low reasoning effort apresentaram resultados melhores.
+Resultados Piloto 1: Tive que aumentar o número de tokens do gpt-5-2025-08-07, o que acabou deixando caro os testes com esse modelo. Ambos os testes com o GPT 5 tiveram, cada um, uma resposta textual, sem score, que coloquei como NA. Para fazer a parte estatística, retirei a linha que continha os NAs da análise. Todos os modelos testados exibiram um viés forte de auto-expressão e de valores seculares-racionais. Em geral, os modelos com low reasoning effort apresentaram resultados melhores.
 
 CONDIDERAÇÕES FINAIS E JUSTIFICATIVA DAS ESCOLHAS Observação: em todos estou utilizando a chat completions API. Priorizei os parâmetros de reasoning effort como low ou medium em virtude na não necessidade de alto esforço para a tarefa solicitada.
 
@@ -51,3 +39,6 @@ Imagine que você configure max_completion_tokens=1024:
 Parte dos tokens pode ser utilizada no raciocínio interno do modelo.
 Outra parte pode ser utilizada na resposta final visível.
 Se o limite for atingido antes de a resposta ser concluída, a resposta pode ficar incompleta. Aumentar o limite não obriga o modelo a raciocinar mais. Ele apenas permite que gere mais tokens caso precise deles. O esforço de raciocínio é controlado por outros mecanismos, como reasoning_effort, quando disponíveis.
+
+
+PILOTO 2:
